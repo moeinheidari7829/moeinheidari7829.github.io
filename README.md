@@ -1,77 +1,101 @@
+<div align="center">
+
+<img src="assets/profile.jpg" width="150" alt="Moein Heidari">
+
 # Moein Heidari
 
-Hi there 👋, My name is **Moein Heidari**, a deep learning developer and researcher! Feel free to contact me if you have an open position in your team 😄. Always eager to discuss with people on research and development topics.
+**Ph.D. Candidate · Biomedical Engineering · University of British Columbia**<br>
+<sub>UltrAi Lab · Pushing the boundaries of AI in healthcare.</sub>
 
-📧 **moeinheidari7829@gmail.com** | 🌐 **[Personal Website](https://moeinheidari7829.github.io/)**
+<br>
 
----
+<a href="https://moeinheidari7829.github.io/"><img src="https://img.shields.io/badge/Website-1768a6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
+<a href="https://scholar.google.com/citations?user=mir8D5UAAAAJ&hl=en"><img src="https://img.shields.io/badge/Scholar-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white" alt="Google Scholar"></a>
+<a href="https://www.linkedin.com/in/moein-heidari/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+<a href="https://moeinheidari7829.github.io/assets/Moein_Heidari_CV.pdf"><img src="https://img.shields.io/badge/CV-172333?style=for-the-badge&logo=readthedocs&logoColor=white" alt="CV"></a>
+<a href="mailto:moein.heidari@ubc.ca"><img src="https://img.shields.io/badge/Email-c2410c?style=for-the-badge&logo=maildotru&logoColor=white" alt="Email"></a>
 
-## 📊 SUMMARY
+<br><br>
 
-Motivated computer engineer with **5+ years of experience** in research, development, and design. Publication record in **WACV**, **MICCAI**, **BMVC**, **CVPR**, **ICCV**, and **IEEE Transactions**. Aiming to apply strong knowledge and skills in deep learning, computer vision, data structures/algorithms design and programming in real-world industrial problems including, but not limited to, image/video processing, medical image processing, data analysis, and high-performance computing.
+![Agentic AI](https://img.shields.io/badge/Agentic_AI-eef4fa?style=flat-square)
+![Multimodal LLMs](https://img.shields.io/badge/Multimodal_LLMs-eef4fa?style=flat-square)
+![Diffusion Models](https://img.shields.io/badge/Diffusion_Models-eef4fa?style=flat-square)
+![Self-Supervised Learning](https://img.shields.io/badge/Self--Supervised_Learning-eef4fa?style=flat-square)
+![PEFT](https://img.shields.io/badge/Parameter--Efficient_Fine--Tuning-eef4fa?style=flat-square)
+![INRs](https://img.shields.io/badge/Implicit_Neural_Representations-eef4fa?style=flat-square)
+![Echocardiography](https://img.shields.io/badge/Ultrasound_%26_Echocardiography-eef4fa?style=flat-square)
 
----
-
-## 🎯 EXPERIENCE [SELECTED]
-
-• **PhD Student**, University of British Columbia, Canada (2024-Present)
-  - Researching agentic frameworks for echocardiography and implicit neural representations
-  - Published in top-tier venues: CVPR, ICCV, ICASSP, SPIE, BMVC
-
-• **Remote Research Assistant**, RWTH Aachen University, Germany (2022-2023)
-  - Deep learning methods for medical image analysis
-  - Research results published in: MICCAI, WACV, IEEE Access
-
-• **Research Assistant**, Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), UAE (2023)
-  - Scale-aware Attention Network for Microscopic Image Segmentation
-  - Research results published in: BMVC 2023 (Oral Presentation)
-
-• **Research Assistant**, Iran University of Science & Technology (IUST) (#3 in Iran), 2017–2022
-  - Worked on transformer-based end-to-end communication systems
+</div>
 
 ---
 
-## 🤝 RESEARCH COLLABORATION WITH
+### 📰 Latest
 
-• **Ehsan Adeli**, Stanford University, USA (Chair of CVPR, ICCV, ECCV, NeurIPS, MICCAI, etc.) since 2022
-• **Dorit Merhof**, RWTH, Germany (German research chair on Medical Image Analysis) since 2022  
-• **Julien Cohen-Adad**, MILA, Canada (Canadian research chair on MRI) since 2022
-• **Hisham Cholakkal**, MBZUAI, UAE (Mohamed bin Zayed University of Artificial Intelligence) since 2023
-• **Ilker Hacihaliloglu**, UBC, Canada (Department of Radiology, Department of Medicine) since 2023
+| | |
+|:--|:--|
+| **Nov 2026** | 🎉 *Which Pretext Task Transfers?* accepted as an **oral** at **SPIE Medical Imaging 2027** |
+| **Oct 2026** | 🏆 **WaRA** won the **Impact Award** at the MIRASOL workshop, MICCAI 2026 |
+| **Aug 2026** | 🎉 4 papers accepted at **MICCAI 2026 workshops** |
+| **May 2026** | 🎉 **XTinyU-Net** early-accepted at **MICCAI 2026** (top 9%) |
+| **Nov 2025** | 🎓 Advanced to **Ph.D. candidacy** |
 
----
+### ✨ Selected work
 
-## 🛠️ SKILLS
+<table>
+<tr>
+<td width="50%" valign="top">
+<a href="https://moeinheidari7829.github.io/echo-copilot/"><img src="assets/echo-copilot.png" alt="Echo-CoPilot"></a><br>
+<b>Echo-CoPilot</b> · agentic echocardiography interpretation<br>
+<img src="https://img.shields.io/badge/MICCAI_2026-Workshop-1768a6?style=flat-square">
+<a href="https://arxiv.org/abs/2512.09944">paper</a> · <a href="https://github.com/moeinheidari7829/Echo-CoPilot">code</a>
+</td>
+<td width="50%" valign="top">
+<a href="https://moeinheidari7829.github.io/wara/"><img src="assets/wara.png" alt="WaRA"></a><br>
+<b>WaRA</b> · wavelet low-rank adaptation<br>
+<img src="https://img.shields.io/badge/MICCAI_2026-Impact_Award-a16207?style=flat-square">
+<a href="https://arxiv.org/abs/2506.24092">paper</a> · <a href="https://github.com/moeinheidari7829/WaRA">code</a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://moeinheidari7829.github.io/SL2A-INR/"><img src="assets/SL2A-teaser.png" alt="SL²A-INR"></a><br>
+<b>SL²A-INR</b> · learnable activations for INRs<br>
+<img src="https://img.shields.io/badge/ICCV-2025-1768a6?style=flat-square">
+<a href="https://arxiv.org/abs/2409.10836">paper</a> · <a href="https://github.com/Iceage7/SL2A-INR">code</a>
+</td>
+<td width="50%" valign="top">
+<a href="https://arxiv.org/abs/2412.09910"><img src="assets/prompt2perturb.png" alt="Prompt2Perturb"></a><br>
+<b>Prompt2Perturb</b> · text-guided diffusion attacks on ultrasound<br>
+<img src="https://img.shields.io/badge/CVPR-2025-1768a6?style=flat-square">
+<a href="https://arxiv.org/abs/2412.09910">paper</a> · <a href="https://github.com/yasamin-med/P2P">code</a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://moeinheidari7829.github.io/every-pixel/"><img src="assets/every-pixel.png" alt="Every Pixel Is an Option"></a><br>
+<b>Every Pixel Is an Option</b> · LLM-driven ultrasound biometry<br>
+<img src="https://img.shields.io/badge/arXiv-2026-b31b1b?style=flat-square">
+<a href="https://arxiv.org/abs/2611.03360">paper</a>
+</td>
+<td width="50%" valign="top">
+<a href="https://arxiv.org/abs/2605.09639"><img src="assets/xtinyunet.png" alt="XTinyU-Net"></a><br>
+<b>XTinyU-Net</b> · training-free U-Net scaling<br>
+<img src="https://img.shields.io/badge/MICCAI-2026-1768a6?style=flat-square">
+<a href="https://arxiv.org/abs/2605.09639">paper</a> · <a href="https://github.com/alvinkimbowa/xtinyunet">code</a>
+</td>
+</tr>
+</table>
 
-• **Programming**: Python, CUDA, MATLAB, SQL, JavaScript, HTML/CSS
-• **Version Control**: Git, GitHub
-• **Paradigms**: Object-Oriented/Functional Programming
-• **Specializations**: Parallel Computing, Image Processing, Deep Neural Networks, Computer Vision, Medical Imaging, AI Agents, Large Language Models
+<div align="center">
 
----
+**[→ All 27 publications](https://moeinheidari7829.github.io/#publications)**
 
-📖 **[Google Scholar](https://scholar.google.com/citations?user=mir8D5UAAAAJ&hl=en)**
+<br>
 
----
+<img src="https://skillicons.dev/icons?i=python,pytorch,tensorflow,opencv,linux,git,latex&perline=7" alt="Tools">
 
-## 🌟 HIGHLIGHTS
+<br><br>
 
-- 🎓 **PhD Student** at University of British Columbia
-- 📝 **20+ Publications** in top-tier venues
-- 🤝 **International Collaborations** with Stanford, RWTH, MILA, MBZUAI
-- 🔬 **Research Focus**: Computer Vision, Medical Imaging, AI Agents, Deep Learning
-- 💻 **Technical Skills**: Python, CUDA, Deep Learning, Computer Vision
+<sub>Reviewer · NeurIPS · ICML · ICLR · CVPR · ICCV · MICCAI · BMVC · TMLR · IEEE TMI · IEEE JBHI</sub>
 
----
-
-## 📞 CONTACT
-
-- 📧 **Email**: moeinheidari7829@gmail.com | moein.heidari@ubc.ca
-- 🌐 **Website**: [moeinheidari7829.github.io](https://moeinheidari7829.github.io/)
-- 🐙 **GitHub**: [@moeinheidari7829](https://github.com/moeinheidari7829)
-- 💼 **LinkedIn**: [Moein Heidari](https://www.linkedin.com/in/moein-heidari/)
-- 📚 **Google Scholar**: [Moein Heidari](https://scholar.google.com/citations?user=mir8D5UAAAAJ&hl=en)
-
----
-
-*Always open to collaboration and new opportunities! Feel free to reach out for research discussions, job opportunities, or just to say hello! 😊*
+</div>
