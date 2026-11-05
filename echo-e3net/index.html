@@ -53,7 +53,10 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="../assets/echo-e3net.png" alt="Echo-E³Net overview figure" class="teaser-img">
+      <figure class="pp-figure pp-teaser">
+        <img src="static/figure-1-1.svg" alt="Architecture of Echo-E3Net. An LHUNet encoder extracts multi-scale spatio-temporal features from the input video X. E2CB" loading="lazy">
+        <figcaption><b>Figure 1.</b> Architecture of Echo-E<sup>3</sup>Net. An LHUNet encoder extracts multi-scale spatio-temporal features from the input video X. E<sup>2</sup>CBD tokenizes the skip features and applies phase-specific cross-attention from ED/ES landmark queries to predict dual-phase endocardial border chords (EBs) and landmark embeddings (LEs). E<sup>2</sup>FA fuses global feature statistics (average, maximum, variance) with the landmark descriptor to regress EF. Here, EBs denote the predicted endocardial border chords and LEs the landmark embeddings.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -70,6 +73,38 @@
     </div>
   </div>
 </section>
+
+  <section class="section pp-section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Experiments</h2>
+      <figure class="pp-table">
+        <figcaption><b>Table 1.</b> Comparison of EF estimation models on EchoNet-Dynamic. Parameter count in millions. Green indicates the best result and yellow the second best.</figcaption>
+        <div class="pp-table-scroll"><table>
+          <tr><th class="bt"><b>Model</b></th><th class="bt"><b>Frames</b></th><th class="bt"><b>FLOPs</b></th><th class="bt"><b>Params</b></th><th class="bt"><b>MAE</b> ↓</th><th class="bt"><b>RMSE</b> ↓</th><th class="bt"><b>R<sup>2</sup></b> ↑</th></tr><tr><th class="bt">UVT [14]</th><th class="bt">128</th><td class="bt">130.00G</td><td class="bt">-</td><td class="bt">5.95</td><td class="bt">8.38</td><td class="bt">0.52</td></tr><tr><th>MC3 [12]</th><th>32</th><td>97.656G</td><td>-</td><td>4.45</td><td>5.68</td><td>0.76</td></tr><tr><th>EchoGNN [8]</th><th>64</th><td>-</td><td style="background:#FFF5C8">1.7</td><td>4.45</td><td>-</td><td>0.77</td></tr><tr><th>EchoNet-Dynamic [12]</th><th>32</th><td>91.974G</td><td>32</td><td>4.22</td><td>5.56</td><td>0.79</td></tr><tr><th>EchoGraphs [18]</th><th>16</th><td>40.739G</td><td>27.6</td><td>4.01</td><td>5.36</td><td style="background:#FFF5C8">0.81</td></tr><tr><th>EchoCoTr [9]</th><th>36</th><td>44.907G</td><td>21</td><td>3.98</td><td>5.34</td><td style="background:#FFF5C8">0.81</td></tr><tr><th>CoReEcho [6]</th><th>36</th><td>58.92G</td><td>21</td><td style="background:#FFF5C8">3.90</td><td style="background:#C8E6C9">5.13</td><td style="background:#C8E6C9">0.82</td></tr><tr><th>CardiacNet [20]</th><th>16</th><td>7949G</td><td>28</td><td style="background:#C8E6C9">3.83</td><td>-</td><td>-</td></tr><tr><th class="bb"><b>Echo-E<sup>3</sup>Net (Ours)</b></th><th class="bb">64</th><td class="bb" style="background:#C8E6C9">8.05G</td><td class="bb" style="background:#C8E6C9">1.55</td><td class="bb">3.92</td><td class="bb" style="background:#FFF5C8">5.20</td><td class="bb" style="background:#C8E6C9">0.82</td></tr>
+        </table></div>
+      </figure>
+      <figure class="pp-table">
+        <figcaption><b>Table 2.</b> Ablation over Echo-E<sup>3</sup>Net components on EchoNet-Dynamic. Results are averaged over 3 runs. Green best, yellow second best.</figcaption>
+        <div class="pp-table-scroll"><table>
+          <tr><th colspan="5" class="bt"><b>Component</b></th><th colspan="3" class="bt"><b>Metric</b></th></tr><tr><th class="bt">E<sup>2</sup>CBD</th><th class="bt">E<sup>2</sup>FA</th><th class="bt">L_pts</th><th class="bt">L<sub>B</sub></th><th class="bt">L<sub>H</sub></th><th class="bt">MAE ↓</th><th class="bt">RMSE ↓</th><th class="bt">R<sup>2</sup> ↑</th></tr><tr><td class="bt">✔</td><td class="bt">✔</td><td class="bt">✘</td><td class="bt">✔</td><td class="bt">✔</td><td class="bt">3.98</td><td class="bt">5.30</td><td class="bt">0.81</td></tr><tr><td>✔</td><td>✔</td><td>✔</td><td>✘</td><td>✔</td><td>4.00</td><td>5.31</td><td>0.81</td></tr><tr><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td>✘</td><td style="background:#FFF5C8">3.95</td><td style="background:#FFF5C8">5.29</td><td>0.81</td></tr><tr><td>✘</td><td>✔</td><td>–</td><td>–</td><td>–</td><td>4.05</td><td>5.40</td><td>0.80</td></tr><tr><td>✔</td><td>✘</td><td>✔</td><td>✔</td><td>✔</td><td>4.01</td><td>5.31</td><td>0.81</td></tr><tr><td class="bb">✔</td><td class="bb">✔</td><td class="bb">✔</td><td class="bb">✔</td><td class="bb">✔</td><td class="bb">3.92</td><td class="bb">5.20</td><td class="bb">0.82</td></tr>
+        </table></div>
+      </figure>
+      <figure class="pp-table">
+        <figcaption><b>Table 3.</b> Generalization to EchoNet-Pediatric. Green best, yellow second best.</figcaption>
+        <div class="pp-table-scroll"><table>
+          <tr><th class="bt">Model</th><th class="bt">Params</th><th class="bt">MAE ↓</th><th class="bt">R<sup>2</sup> ↑</th></tr><tr><th class="bt">EchoGNN [8]</th><td class="bt" style="background:#FFF5C8">1.7 M</td><td class="bt">5.18</td><td class="bt">0.44</td></tr><tr><th>EchoCoTr [9]</th><td>21 M</td><td style="background:#FFF5C8">4.13</td><td style="background:#FFF5C8">0.70</td></tr><tr><th>CoReEcho [6]</th><td>21 M</td><td>4.44</td><td>0.67</td></tr><tr><th class="bb"><b>Echo-E<sup>3</sup>Net</b></th><td class="bb" style="background:#C8E6C9">1.55 M</td><td class="bb" style="background:#C8E6C9">3.88</td><td class="bb" style="background:#C8E6C9">0.73</td></tr>
+        </table></div>
+      </figure>
+      <figure class="pp-figure">
+        <img src="static/figure-2-1.svg" alt="Discrimination for reduced ejection fraction on the EchoNet-Dynamic test set using a threshold of LVEF ≤ 40. Left, recei" loading="lazy">
+        <figcaption><b>Figure 2.</b> Discrimination for reduced ejection fraction on the EchoNet-Dynamic test set using a threshold of LVEF ≤ 40. Left, receiver operating characteristic curve with area under the curve and confidence interval. Right, precision recall curve with average precision and confidence interval; the dashed line indicates the prevalence baseline.</figcaption>
+      </figure>
+      <figure class="pp-figure">
+        <img src="static/figure-3-1.png" alt="Grad-CAM [16] across the cardiac cycle on an EchoNet-Dynamic video. Echo-E3Net’s saliency tracks the contracting left-ve" loading="lazy">
+        <figcaption><b>Figure 3.</b> Grad-CAM [16] across the cardiac cycle on an EchoNet-Dynamic video. Echo-E<sup>3</sup>Net’s saliency tracks the contracting left-ventricular cavity frame-to-frame, whereas CoReEcho’s drifts into surrounding tissue, an effect of E<sup>2</sup>CBD’s explicit endocardial supervision.</figcaption>
+      </figure>
+    </div>
+  </section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">

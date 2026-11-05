@@ -88,6 +88,130 @@ body {
   margin: 0 auto;
 }
 
+/* ---- Paper figures and tables ---- */
+.pp-section {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.pp-section + .pp-section {
+  border-top: 1px solid #f0f0f0;
+}
+
+.pp-figure,
+.pp-table {
+  margin: 0 auto 2.5rem;
+}
+
+.pp-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.pp-teaser img {
+  max-height: 560px;
+  object-fit: contain;
+}
+
+.pp-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
+  gap: 4px;
+}
+
+.pp-grid img {
+  border-radius: 2px;
+}
+
+.pp-figure figcaption,
+.pp-table figcaption {
+  margin-top: 0.75rem;
+  color: #4a4a4a;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  text-align: justify;
+}
+
+.pp-table figcaption {
+  margin: 0 0 0.75rem;
+}
+
+.pp-teaser figcaption {
+  text-align: center;
+}
+
+.pp-code {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 0.82rem;
+  text-align: left;
+}
+
+.pp-table {
+  position: relative;
+  left: 50%;
+  width: min(1200px, calc(100vw - 32px));
+  transform: translateX(-50%);
+}
+
+.pp-table figcaption {
+  max-width: 960px;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.pp-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pp-table table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.pp-table th,
+.pp-table td {
+  padding: 0.28rem 0.45rem;
+  text-align: center;
+  vertical-align: middle;
+  border: 0;
+}
+
+.pp-table tr > :first-child {
+  text-align: left;
+}
+
+.pp-table th {
+  font-weight: 600;
+}
+
+.pp-table tr:first-child > * {
+  border-top: 2px solid #363636;
+}
+
+.pp-table tr:last-child > * {
+  border-bottom: 2px solid #363636;
+}
+
+.pp-table .bt {
+  border-top: 1px solid #b5b5b5;
+}
+
+.pp-table .bb {
+  border-bottom: 1px solid #b5b5b5;
+}
+
+.pp-table tbody tr:hover > td {
+  background-color: #fafafa;
+}
+
 .bibtex-head {
   display: flex;
   align-items: center;

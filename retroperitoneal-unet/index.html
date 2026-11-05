@@ -52,7 +52,10 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="../assets/SPIE.png" alt="U-Net modifications for retroperitoneal tumor segmentation overview figure" class="teaser-img">
+      <figure class="pp-figure pp-teaser">
+        <img src="static/figure-1-1.png" alt="(a) Schematic representation of the proposed method, ViLU-Net, (b) the ViL block, (c) convolutional stem, and (d) Up Sam" loading="lazy">
+        <figcaption><b>Figure 1.</b> (a) Schematic representation of the proposed method, ViLU-Net, (b) the ViL block, (c) convolutional stem, and (d) Up Sampler and Down Sampler blocks, where IN stands for Instance Normalization operation.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -69,6 +72,36 @@
     </div>
   </div>
 </section>
+
+  <section class="section pp-section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Results</h2>
+      <figure class="pp-table">
+        <figcaption><b>Table 1.</b> Results summary of 3D organ segmentation on the abdomen CT dataset.</figcaption>
+        <div class="pp-table-scroll"><table>
+          <tr><th class="bt">Methods</th><th class="bt">Organs in Abdomen CT</th></tr><tr><th class="bt">DSC</th><th class="bt">NSD</th><th class="bt">HD</th><th class="bt">IoU</th></tr><tr><th class="bt">nnU-Net [33]</th><td class="bt">0.8469</td><td class="bt">0.8881</td><td class="bt">12.54</td><td class="bt">0.9662</td></tr><tr><th>SwinUNETR [32]</th><td>0.8259</td><td>0.8680</td><td>27.99</td><td>0.9551</td></tr><tr><th>U-Mamba [27]</th><td>0.8480</td><td>0.8883</td><td>17.12</td><td>0.9657</td></tr><tr><th class="bb">ViLU-Net (Ours)</th><td class="bb"><b>0.8594</b></td><td class="bb"><b>0.8944</b></td><td class="bb"><b>11.98</b></td><td class="bb"><b>0.9716</b></td></tr>
+        </table></div>
+      </figure>
+      <figure class="pp-figure">
+        <img src="static/figure-2-1.jpg" alt="Visualized segmentation examples of abdominal organ segmentation in CT. The ViLU-Net excels at differentiating intricate" loading="lazy">
+        <figcaption><b>Figure 2.</b> Visualized segmentation examples of abdominal organ segmentation in CT. The ViLU-Net excels at differentiating intricate soft tissues within the abdominal region.</figcaption>
+      </figure>
+      <figure class="pp-figure">
+        <div class="pp-grid" style="--cols:6"><img src="static/figure-3-1.png" alt="" loading="lazy"><img src="static/figure-3-2.png" alt="" loading="lazy"><img src="static/figure-3-3.png" alt="" loading="lazy"><img src="static/figure-3-4.png" alt="" loading="lazy"><img src="static/figure-3-5.png" alt="" loading="lazy"><img src="static/figure-3-6.png" alt="" loading="lazy"><img src="static/figure-3-7.png" alt="" loading="lazy"><img src="static/figure-3-8.png" alt="" loading="lazy"><img src="static/figure-3-9.png" alt="" loading="lazy"><img src="static/figure-3-10.png" alt="" loading="lazy"><img src="static/figure-3-11.png" alt="" loading="lazy"><img src="static/figure-3-12.png" alt="" loading="lazy"></div>
+        <figcaption><b>Figure 3.</b> Visual comparisons of different methods on our in house dataset.</figcaption>
+      </figure>
+      <figure class="pp-figure">
+        <img src="static/figure-4-1.jpg" alt="Sample visualization of our in-house dataset from the 3 different views along with the corresponding segmentation map" loading="lazy">
+        <figcaption><b>Figure 4.</b> Sample visualization of our in-house dataset from the 3 different views along with the corresponding segmentation map</figcaption>
+      </figure>
+      <figure class="pp-table">
+        <figcaption><b>Table 2.</b> Results summary of 3D tumour segmentation on the retroperitoneal tumour dataset.</figcaption>
+        <div class="pp-table-scroll"><table>
+          <tr><th class="bt">Methods</th><th class="bt">Retroperitoneal Tumour</th></tr><tr><th class="bt">DSC</th><th class="bt">NSD</th><th class="bt">HD</th><th class="bt">IoU</th></tr><tr><th class="bt">nnU-Net [33]</th><td class="bt">0.9013</td><td class="bt">0.9002</td><td class="bt">24.64</td><td class="bt">0.8322</td></tr><tr><th>SwinUNETR [32]</th><td>0.8310</td><td>0.8478</td><td>51.28</td><td>0.7481</td></tr><tr><th>U-Mamba [27]</th><td>0.7694</td><td>0.7475</td><td>64.35</td><td>0.6620</td></tr><tr><th class="bb">ViLU-Net (Ours)</th><td class="bb"><b>0.9309</b></td><td class="bb"><b>0.9292</b></td><td class="bb"><b>11.19</b></td><td class="bb"><b>0.8720</b></td></tr>
+        </table></div>
+      </figure>
+    </div>
+  </section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">

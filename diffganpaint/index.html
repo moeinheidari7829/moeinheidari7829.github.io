@@ -45,7 +45,10 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="../assets/DiffGANPaint.png" alt="DiffGANPaint overview figure" class="teaser-img">
+      <figure class="pp-figure pp-teaser">
+        <div class="pp-grid" style="--cols:2"><img src="static/figure-3-1.png" alt="" loading="lazy"><img src="static/figure-3-2.png" alt="" loading="lazy"></div>
+        <figcaption><b>Figure 3.</b> Visual examples of DiffGANPaint results on generic images. From left to right, shows the original image, input masked image and result image.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -62,6 +65,31 @@
     </div>
   </div>
 </section>
+
+  <section class="section pp-section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Methodology</h2>
+      <figure class="pp-figure">
+        <pre class="pp-code"><code>def denoise_diffusion(x, model):
+    noise = torch.randn_like(x)
+    for i in range(timesteps):
+        eps = torch.randn_like(x)
+        x = x + torch.sqrt(torch.tensor(2.0)) *
+        eps
+        model_input = torch.cat([x, noise])
+        out = model(model_input)
+        x = x + out * np.sqrt(1/timesteps)
+    return x
+
+def test_inpainting(img, gan,mask):
+    denoised_img = denoise_diffusion(img,gan)
+    model_input = torch.cat([denoised_img, mask])
+    output = gan(model_input)
+    output = output * mask + masked_image * (1 - mask)</code></pre>
+        <figcaption><b>Figure 1.</b> <b>DiffGANPaint Inpainting Procedure in Pytorch Style:</b> Pseudo code to generate the inpainted image using the corresponding mask, trained diffusion model and generator.</figcaption>
+      </figure>
+    </div>
+  </section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
