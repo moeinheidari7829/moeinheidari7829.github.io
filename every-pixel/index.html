@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Every Pixel Is an Option</title>
+  <meta name="description" content="Every Pixel Is an Option: A System One Model for Medical Ultrasound Biometry">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css">
+  <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+
+<nav class="project-nav">
+  <a href="../#publications"><i class="fas fa-arrow-left" aria-hidden="true"></i> Moein Heidari</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Every Pixel Is an Option: A System One Model for Medical Ultrasound Biometry</h1>
+          <p class="is-size-4 has-text-weight-semibold mt-2 mb-4 publication-venue-line">✨ arXiv preprint, 2026 ✨</p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="../">Moein Heidari</a>,</span>
+            <span class="author-block">Junbo Rao,</span>
+            <span class="author-block">Yudan Chen,</span>
+            <span class="author-block">Yasamin Medghalchi,</span>
+            <span class="author-block">River Jiang,</span>
+            <span class="author-block">Wenjin Chen,</span>
+            <span class="author-block">David J. Foran,</span>
+            <span class="author-block">Jasmine Grewal,</span>
+            <span class="author-block">Ilker Hacihaliloglu</span>
+          </div>
+          <div class="publication-links">
+            <a class="button" href="https://arxiv.org/abs/2611.03360" target="_blank" rel="noopener noreferrer">
+              <i class="ai ai-arxiv" aria-hidden="true"></i><span>arXiv</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="../assets/every-pixel.png" alt="Every Pixel Is an Option overview figure" class="teaser-img">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>**Purpose:** Ultrasound biometry is widely used across various clinical applications, including prenatal and cardiac examinations, to obtain quantitative measurements by placing calipers at anatomical landmarks. However, these measurements remain subject to interoperator variability as they rely largely on manual caliper placement. Conventional methods often use specialized prediction heads for different ultrasound tasks, whereas vision-language models offer flexibility through text instructions. However, direct coordinate prediction does not explicitly model spatial likelihood distributions, limiting the representation of localization ambiguity. **Methods:** We propose Kev-Bio, a vision-language model that uses clinical measurement questions to guide ultrasound landmark detection. Inspired by System One decision models, Kev-Bio uses decision representations of the language model to generate queries for each caliper endpoint. These queries are matched against shared dense ultrasound features to produce spatial probability maps, from which landmark coordinates and clinical measurements are derived. The model is trained end-to-end using both landmark localization and clinical measurement losses. **Results:** On the nine-view FU/GU Biometry 2026 dataset, Kev-Bio achieves a mean radial error (MRE) of 22.50 pixels and a clinical measurement mean absolute error (MAE) of 15.38, outperforming the compared baselines in overall performance. **Conclusion:** These results demonstrate the effectiveness of Kev-Bio for ultrasound landmark detection and clinical measurement across different anatomical views. Our code and models are available at https://github.com/moeinheidari7829/Kev-Bio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-head">
+      <h2 class="title">BibTeX</h2>
+      <button type="button" class="copy-bibtex" aria-label="Copy BibTeX"><i class="far fa-copy" aria-hidden="true"></i> <span>Copy</span></button>
+    </div>
+    <pre><code>@article{heidari2026every,
+  title   = {Every Pixel Is an Option: A System One Model for Medical Ultrasound Biometry},
+  author  = {Heidari, Moein and Rao, Junbo and Chen, Yudan and Medghalchi, Yasamin and Jiang, River and Chen, Wenjin and Foran, David J. and Grewal, Jasmine and Hacihaliloglu, Ilker},
+  journal = {arXiv preprint arXiv:2611.03360},
+  year    = {2026}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <a href="../">Moein Heidari</a> · This website is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+      <p>Page template adapted from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.copy-bibtex').addEventListener('click', function () {
+    var btn = this, label = btn.querySelector('span');
+    navigator.clipboard.writeText(document.querySelector('#BibTeX code').textContent).then(function () {
+      label.textContent = 'Copied';
+      setTimeout(function () { label.textContent = 'Copy'; }, 1500);
+    });
+  });
+</script>
+</body>
+</html>

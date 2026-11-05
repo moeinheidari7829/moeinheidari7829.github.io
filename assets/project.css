@@ -1,0 +1,120 @@
+/* Shared styles for per-paper project pages (Nerfies-style, on top of Bulma). */
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.project-nav {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 0;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.95rem;
+}
+
+.project-nav a {
+  color: #4a4a4a;
+}
+
+.project-nav a:hover {
+  color: hsl(204, 86%, 53%);
+}
+
+.publication-title,
+.publication-authors,
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue-line {
+  color: #363636;
+}
+
+.publication-authors {
+  margin-bottom: 0.25rem;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+  margin-right: 0.25rem;
+}
+
+.equal-note {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #4a4a4a;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.publication-links .button {
+  gap: 0.45rem;
+  color: #fff;
+  background-color: #363636;
+  border-color: transparent;
+  border-radius: 290486px;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+}
+
+.publication-links .button:hover {
+  color: #fff;
+  background-color: #2f2f2f;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser-img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.bibtex-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.bibtex-head .title {
+  margin-bottom: 0 !important;
+}
+
+.copy-bibtex {
+  padding: 0.3rem 0.75rem;
+  color: #363636;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.copy-bibtex:hover {
+  border-color: #363636;
+}
+
+#BibTeX pre {
+  margin-top: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

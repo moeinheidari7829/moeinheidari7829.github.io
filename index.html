@@ -1,901 +1,1049 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Moein Heidari - PhD Student at UBC researching Computer Vision, Medical Imaging, and AI Agents">
-  <meta name="keywords" content="Moein Heidari, Computer Vision, Medical Imaging, Deep Learning, AI Agents, LLM, UBC">
-  <meta name="author" content="Moein Heidari">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Moein Heidari</title>
-  
-  <!-- Fonts -->
+  <meta name="description" content="Moein Heidari, Ph.D. candidate in Biomedical Engineering at the University of British Columbia, working on computer vision and AI for medical imaging and echocardiography.">
+  <meta name="author" content="Moein Heidari">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  
-  <!-- Custom Cursor -->
-  <div class="cursor"></div>
-  <div class="cursor-follower"></div>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-container">
-      <a href="#home" class="nav-brand">Moein Heidari</a>
-      <button class="nav-toggle" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="hero" id="home">
-    <div class="hero-bg">
-      <div class="floating-blob blob-1"></div>
-      <div class="floating-blob blob-2"></div>
-      <div class="floating-blob blob-3"></div>
-    </div>
+  <header id="header">
     <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <div class="hero-tag">
-            <i class="fas fa-graduation-cap"></i>
-            PhD Student & Researcher
-          </div>
-          <h1 class="hero-name">
-            <span class="gradient-text">Moein Heidari</span>
-          </h1>
-          <p class="hero-title">I'm a <span class="typed-text" id="typed"></span></p>
-          <div class="hero-stats">
-            <div class="stat">
-              <div class="stat-num" data-target="20">0</div>
-              <div class="stat-label">Publications</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">MedIA</div>
-              <div class="stat-label">Journal</div>
-            </div>
-            <div class="stat">
-              <div class="stat-num">ICCV</div>
-              <div class="stat-label">2025</div>
-            </div>
-          </div>
-          <div class="hero-actions">
-            <a href="#publications" class="btn btn-primary">
-              <i class="fas fa-scroll"></i>
-              View Publications
-            </a>
-            <a href="#contact" class="btn btn-outline">
-              <i class="fas fa-envelope"></i>
-              Get In Touch
-            </a>
-          </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a class="site-title" href="#hero">Moein Heidari</a>
+        <div class="nav-links">
+          <a href="#about" class="nav-link">about</a>
+          <a href="#news" class="nav-link">news</a>
+          <a href="#publications" class="nav-link">publications</a>
+          <a href="assets/Moein_Heidari_CV.pdf" target="_blank" rel="noopener noreferrer">cv</a>
+          <a href="#contact" class="nav-link">contact</a>
         </div>
-        <div class="hero-image">
-          <div class="image-wrapper">
-            <img src="./assets/myself.jpeg" alt="Moein Heidari">
-            <div class="image-overlay">
-              <div class="status-badge">
-                <i class="fas fa-circle"></i>
-                Available for collaboration
-              </div>
-            </div>
-          </div>
-        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="container">
+    <img src="assets/profile.jpg" alt="Moein Heidari" class="profile-img">
+    <div class="profile-info">
+      <h1 class="profile-name">Moein Heidari</h1>
+      <p class="profile-focus">Pushing the boundaries of<br><span>AI in healthcare.</span></p>
+      <p class="profile-desc">Ph.D. Candidate, Biomedical Engineering<br>University of British Columbia<br>UltrAi Lab</p>
+      <div class="profile-social" aria-label="Social and contact links">
+        <a href="mailto:moein.heidari@ubc.ca" aria-label="Email Moein Heidari"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://scholar.google.com/citations?user=mir8D5UAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i></a>
+        <a href="https://github.com/moeinheidari7829" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/moein-heidari/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
       </div>
-      <div class="scroll-indicator">
-        <div class="scroll-arrow">
-          <i class="fas fa-chevron-down"></i>
-        </div>
-      </div>
+      <a class="research-link" href="#publications">Explore my research <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">About Me</span>
-        <h2 class="section-title">Passionate Researcher in AI & Medical Imaging</h2>
-        <p class="section-desc">
-          Exploring the frontiers of Computer Vision, Medical Imaging, and AI Agents to solve real-world healthcare challenges.
-        </p>
+  <main id="main">
+
+    <!-- ======= About ======= -->
+    <section id="about">
+      <div class="container">
+
+        <div class="about-copy">
+          <p>
+            My research explores computer vision, medical imaging, and deep learning, with a focus on
+            implicit neural representations, vision transformers, diffusion models, and AI agents and
+            large language models for medical applications.
+          </p>
+          <p>
+            I am a Ph.D. candidate in Biomedical Engineering at the
+            <a href="https://www.ubc.ca/" target="_blank" rel="noopener noreferrer">University of British Columbia</a>,
+            supervised by Dr. Ilker Hacihaliloglu at the
+            <a href="https://ultrai.med.ubc.ca/" target="_blank" rel="noopener noreferrer">UltrAi Lab</a>.
+            My thesis, <em>Towards Complete AI-Enabled Echocardiography Interpretation with a Unified Multimodal Framework</em>,
+            combines multimodal AI agents with vision models to improve cardiac imaging analysis and diagnosis.
+          </p>
+          <p>
+            Previously, I was a remote research assistant at
+            <a href="https://www.rwth-aachen.de/" target="_blank" rel="noopener noreferrer">RWTH Aachen University</a>
+            with Prof. Dorit Merhof and Reza Azad, and at
+            <a href="https://mbzuai.ac.ae/" target="_blank" rel="noopener noreferrer">MBZUAI</a>
+            with Dr. Hisham Cholakkal. I received my M.Sc. in Communication Systems and B.Sc. in Electrical Engineering from the
+            <a href="https://www.iust.ac.ir/" target="_blank" rel="noopener noreferrer">Iran University of Science and Technology</a>.
+          </p>
+          <p>
+            I have collaborated with researchers at Stanford, RWTH Aachen, Mila, MBZUAI, and Rutgers, and I am always happy
+            to discuss research ideas and collaborations.
+          </p>
+          <p class="about-actions">
+            <a href="assets/Moein_Heidari_CV.pdf" class="cv-link" target="_blank" rel="noopener noreferrer">View CV</a>
+          </p>
+        </div>
+
+        <div class="content">
+          <h3>Experience</h3>
+          <div class="experience-list">
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-graduation-cap"></i></span>
+                <div>
+                  <p class="experience-role"><b>Ph.D. in Biomedical Engineering</b></p>
+                  <p class="experience-meta">University of British Columbia, Vancouver, Canada</p>
+                </div>
+              </div>
+              <span class="experience-date">Jan. 2024 - Present</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-flask"></i></span>
+                <div>
+                  <p class="experience-role"><b>Research Assistant</b></p>
+                  <p class="experience-meta">Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), Remote</p>
+                </div>
+              </div>
+              <span class="experience-date">Jan. 2023 - May 2023</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-briefcase"></i></span>
+                <div>
+                  <p class="experience-role"><b>AI Engineer</b></p>
+                  <p class="experience-meta"><a href="https://faraai.ir" target="_blank" rel="noopener noreferrer">FaraAI</a>, Tehran, Iran</p>
+                </div>
+              </div>
+              <span class="experience-date">May 2022 - Dec. 2022</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-cube"></i></span>
+                <div>
+                  <p class="experience-role"><b>Machine Learning and Computer Vision Researcher</b></p>
+                  <p class="experience-meta">DGSculptor, Montreal, Canada (Remote)</p>
+                </div>
+              </div>
+              <span class="experience-date">Dec. 2021 - Dec. 2023</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-globe"></i></span>
+                <div>
+                  <p class="experience-role"><b>Remote Research Assistant</b></p>
+                  <p class="experience-meta">RWTH Aachen University, Aachen, Germany</p>
+                </div>
+              </div>
+              <span class="experience-date">Oct. 2021 - Dec. 2023</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-book"></i></span>
+                <div>
+                  <p class="experience-role"><b>M.Sc. in Communication Systems</b></p>
+                  <p class="experience-meta">Iran University of Science and Technology, Tehran, Iran</p>
+                </div>
+              </div>
+              <span class="experience-date">Oct. 2021 - Nov. 2023</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-microscope"></i></span>
+                <div>
+                  <p class="experience-role"><b>Research Assistant</b></p>
+                  <p class="experience-meta">Iran University of Science and Technology, Dept. of Computer Science, Tehran, Iran</p>
+                </div>
+              </div>
+              <span class="experience-date">Apr. 2021 - Jul. 2021</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-book"></i></span>
+                <div>
+                  <p class="experience-role"><b>B.Sc. in Electrical Engineering</b></p>
+                  <p class="experience-meta">Iran University of Science and Technology, Tehran, Iran</p>
+                </div>
+              </div>
+              <span class="experience-date">Sep. 2017 - Sep. 2021</span>
+            </div>
+          </div>
+
+          <h3>Teaching</h3>
+          <div class="experience-list">
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                <div>
+                  <p class="experience-role"><b>Teaching Assistant</b>, DSCI 100: Introduction to Data Science</p>
+                  <p class="experience-meta">University of British Columbia</p>
+                </div>
+              </div>
+              <span class="experience-date">Fall 2025</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                <div>
+                  <p class="experience-role"><b>Teaching Assistant</b>, DSCI 430: Fairness, Accountability, Transparency and Ethics in Data Science</p>
+                  <p class="experience-meta">University of British Columbia</p>
+                </div>
+              </div>
+              <span class="experience-date">2025W2</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                <div>
+                  <p class="experience-role"><b>Teaching Assistant</b>, CPSC 330: Applied Machine Learning</p>
+                  <p class="experience-meta">University of British Columbia</p>
+                </div>
+              </div>
+              <span class="experience-date">2024W2</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                <div>
+                  <p class="experience-role"><b>Teaching Assistant</b>, CPSC 340: Machine Learning and Data Mining</p>
+                  <p class="experience-meta">University of British Columbia</p>
+                </div>
+              </div>
+              <span class="experience-date">2024W2</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                <div>
+                  <p class="experience-role"><b>Teaching Assistant</b>, Fundamentals of Deep Learning</p>
+                  <p class="experience-meta">Iran University of Science and Technology</p>
+                </div>
+              </div>
+              <span class="experience-date">Spring 2022</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                <div>
+                  <p class="experience-role"><b>Teaching Assistant</b>, Signals and Systems Analysis</p>
+                  <p class="experience-meta">Iran University of Science and Technology</p>
+                </div>
+              </div>
+              <span class="experience-date">Spring 2021, 2022, 2023</span>
+            </div>
+          </div>
+
+          <h3>Talks</h3>
+          <div class="experience-list">
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-microphone"></i></span>
+                <div>
+                  <p class="experience-role"><b>Research proposal</b>: Towards Complete AI-Enabled Echocardiography Interpretation with a Unified Multimodal Framework</p>
+                  <p class="experience-meta">Ph.D. candidacy, University of British Columbia</p>
+                </div>
+              </div>
+              <span class="experience-date">Nov. 2025</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-microphone"></i></span>
+                <div>
+                  <p class="experience-role"><b>Research presentation</b></p>
+                  <p class="experience-meta">Annual HLI Research Day</p>
+                </div>
+              </div>
+              <span class="experience-date">Aug. 2025</span>
+            </div>
+          </div>
+
+          <h3>Service</h3>
+          <div class="experience-list">
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-clipboard-check"></i></span>
+                <div>
+                  <p class="experience-role"><b>Conference Reviewer</b></p>
+                  <p class="experience-meta">NeurIPS 2026 · ICML 2026 · ICLR 2024, 2025, 2026 · MICCAI 2024, 2025, 2026 · CVPR 2025 · ICCV 2025 · BMVC 2025, 2026</p>
+                </div>
+              </div>
+              <span class="experience-date">2024 - Present</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-book-open"></i></span>
+                <div>
+                  <p class="experience-role"><b>Journal Reviewer</b></p>
+                  <p class="experience-meta">Transactions on Machine Learning Research (TMLR) · IEEE Transactions on Medical Imaging · IEEE Journal of Biomedical and Health Informatics · IEEE Access · IEEE Systems Journal · IEEE Signal Processing Letters</p>
+                </div>
+              </div>
+              <span class="experience-date"></span>
+            </div>
+          </div>
+
+          <h3>Honors &amp; Awards</h3>
+          <div class="experience-list">
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-trophy"></i></span>
+                <div><p class="experience-role"><b>Impact Award</b>, MIRASOL Workshop at MICCAI 2026, for <a href="wara/">WaRA</a></p></div>
+              </div>
+              <span class="experience-date">Oct. 2026</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-award"></i></span>
+                <div><p class="experience-role"><b>ICCV 2025 Broadening Participation Program award</b></p></div>
+              </div>
+              <span class="experience-date">Sep. 2025</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-award"></i></span>
+                <div><p class="experience-role">Honorary master's admission, Iran University of Science and Technology</p></div>
+              </div>
+              <span class="experience-date">Sep. 2021</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-award"></i></span>
+                <div><p class="experience-role">Ranked 3rd among 25 Communications students and 9th among 127 Electrical Engineering students, IUST</p></div>
+              </div>
+              <span class="experience-date">May 2021</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-trophy"></i></span>
+                <div><p class="experience-role">1st place, national Rahneshan competition on detecting inappropriate content in images and videos (INEF)</p></div>
+              </div>
+              <span class="experience-date">Feb. 2021</span>
+            </div>
+            <div class="experience-item">
+              <div class="experience-main">
+                <span class="experience-icon"><i class="fas fa-award"></i></span>
+                <div><p class="experience-role">Top 1% among ~148,000 participants in the Iranian National University Entrance Exam</p></div>
+              </div>
+              <span class="experience-date">2017</span>
+            </div>
+          </div>
+        </div>
+
       </div>
-      
-      <div class="about-grid">
-        <div class="about-main">
-          <div class="about-content">
-            <p class="lead">
-              Hi, I'm Moein! 👋 A passionate researcher pushing the boundaries of AI in healthcare.
+    </section>
+
+    <!-- ======= News ======= -->
+    <section id="news">
+      <div class="container">
+        <div class="section-title">
+          <h2>News</h2>
+        </div>
+        <ul class="news-list">
+          <li><article class="news-card"><p class="news-date">Nov. 2026</p><p class="news-copy">📄 New preprint: <a href="every-pixel/" class="link-accent">Every Pixel Is an Option: A System One Model for Medical Ultrasound Biometry</a> is now on <a href="https://arxiv.org/abs/2611.03360" target="_blank" rel="noopener noreferrer">arXiv</a>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Nov. 2026</p><p class="news-copy">🎉 Paper <strong>Which Pretext Task Transfers? Self-Supervised Pretraining Objectives for Lung Ultrasound</strong> accepted for an <strong>oral presentation</strong> at <strong>SPIE Medical Imaging 2027</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Oct. 2026</p><p class="news-copy">🏆 Our paper <a href="wara/" class="link-accent">WaRA</a> won the <strong>Impact Award</strong> at the <strong>MIRASOL workshop</strong> at MICCAI 2026.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Oct. 2026</p><p class="news-copy">🎉 Paper <strong>Incorporating Synthetic Data from Diffusion Models Supports Echocardiography Downstream Tasks</strong> published in the <strong>Journal of Medical Imaging</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Aug. 2026</p><p class="news-copy">🎉 Four papers accepted at <strong>MICCAI 2026 workshops</strong>: <a href="echo-e3net/" class="link-accent">Echo-E³Net</a> (ASMUS), <a href="echo-copilot/" class="link-accent">Echo-CoPilot</a> (Agentic AI for Medicine), <a href="wara/" class="link-accent">WaRA</a> (MIRASOL, oral), and <strong>MaLViL</strong> (MLMI).</p></article></li>
+          <li><article class="news-card"><p class="news-date">May 2026</p><p class="news-copy">🎉 Paper <strong>XTinyU-Net: Training-Free U-Net Scaling via Initialization-Time Sensitivity</strong> received <strong>early acceptance</strong> at <strong>MICCAI 2026</strong> (9% of more than 4,500 submissions).</p></article></li>
+          <li><article class="news-card"><p class="news-date">Nov. 2025</p><div class="news-copy"><p>🎓 Successfully <strong>advanced to Ph.D. candidacy</strong> after presenting my research proposal, <em>Towards Complete AI-Enabled Echocardiography Interpretation with a Unified Multimodal Framework</em>.</p><button type="button" class="news-figure" data-full="assets/news/candidacy-2025.jpg" aria-label="Open photo from the research proposal presentation"><img src="assets/news/candidacy-2025.jpg" alt="Moein Heidari next to the title slide of his Ph.D. research proposal at UBC" loading="lazy"></button></div></article></li>
+          <li><article class="news-card"><p class="news-date">Sep. 2025</p><p class="news-copy">🏅 Selected for the <strong>ICCV 2025 Broadening Participation Program award</strong> to present my work at ICCV 2025 in Honolulu.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Aug. 2025</p><p class="news-copy">🎤 Presented my research at the annual <strong>HLI Research Day</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Jun. 2025</p><p class="news-copy">🎉 Paper <a href="https://moeinheidari7829.github.io/SL2A-INR/" class="link-accent">SL²A-INR</a> accepted at <strong>ICCV 2025</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Feb. 2025</p><p class="news-copy">🎉 Paper <strong>Prompt2Perturb (P2P)</strong> accepted at <strong>CVPR 2025</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Dec. 2024</p><p class="news-copy">🎉 Paper on <strong>Fourier Kolmogorov-Arnold Networks</strong> for implicit neural representations accepted at <strong>ICASSP 2025</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Dec. 2024</p><p class="news-copy">🎉 Paper <a href="retroperitoneal-unet/" class="link-accent">A Study on the Performance of U-Net Modifications in Retroperitoneal Tumor Segmentation</a> accepted at <strong>SPIE Medical Imaging 2025</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Jul. 2024</p><p class="news-copy">🎉 Paper <strong>MSA²Net</strong> on multi-scale adaptive attention accepted at <strong>BMVC 2024</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Jan. 2024</p><p class="news-copy">🎓 Started my <strong>Ph.D. in Biomedical Engineering</strong> at the University of British Columbia.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Aug. 2023</p><p class="news-copy">🎉 Paper <strong>SA²-Net</strong> accepted for an <strong>oral presentation</strong> at <strong>BMVC 2023</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Aug. 2023</p><p class="news-copy">🎉 Our survey on <strong>Vision Transformers in Medical Imaging</strong> accepted in <strong>Medical Image Analysis</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Aug. 2023</p><p class="news-copy">🎉 Our survey on <strong>Diffusion Models in Medical Imaging</strong> accepted in <strong>Medical Image Analysis</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Sep. 2022</p><p class="news-copy">🎉 Paper <a href="hiformer/" class="link-accent">HiFormer</a> on medical image segmentation accepted at <strong>WACV 2023</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Aug. 2022</p><p class="news-copy">🎉 Three papers, <strong>Contextual Attention Network</strong>, <strong>IVD Labeling</strong>, and <strong>TransDeepLab</strong>, accepted at <strong>MICCAI 2022</strong> workshops (MLMI and PRIME).</p></article></li>
+          <li><article class="news-card"><p class="news-date">Aug. 2022</p><p class="news-copy">🎉 Paper <strong>TransNorm</strong> accepted in <strong>IEEE Access</strong>.</p></article></li>
+          <li><article class="news-card"><p class="news-date">Sep. 2021</p><p class="news-copy">🎓 Defended my <strong>bachelor's thesis</strong> on deep learning based end-to-end wireless communication.</p></article></li>
+        </ul>
+        <button type="button" class="news-toggle" aria-expanded="false">show older news</button>
+      </div>
+    </section>
+
+    <!-- ======= Publications ======= -->
+    <section id="publications">
+      <div class="container">
+        <div class="section-title">
+          <h2>Publications</h2>
+          <p>Browse the full list by year, then open individual abstracts, papers, code, and teaser visuals.</p>
+        </div>
+
+        <div class="publications-toolbar" role="toolbar" aria-label="Filter publications by year">
+          <button type="button" class="pub-filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="pub-filter" data-filter="2027" aria-pressed="false">2027</button>
+          <button type="button" class="pub-filter" data-filter="2026" aria-pressed="false">2026</button>
+          <button type="button" class="pub-filter" data-filter="2025" aria-pressed="false">2025</button>
+          <button type="button" class="pub-filter" data-filter="2024" aria-pressed="false">2024</button>
+          <button type="button" class="pub-filter" data-filter="2023" aria-pressed="false">2023</button>
+          <button type="button" class="pub-filter" data-filter="2022" aria-pressed="false">2022</button>
+        </div>
+        <p class="publication-status" aria-live="polite">Showing all 27 publications.</p>
+
+        <article class="post oral-paper" data-year="2027">
+          <div class="pub-media">
+            <img src="assets/lus-pretext.png" alt="Which Pretext Task Transfers? teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">Which Pretext Task Transfers? Self-Supervised Pretraining Objectives for Lung Ultrasound</h3>
+            <p class="pub-authors">
+              <strong>Moein Heidari</strong>, Junbo Rao, Jai Choraria, Wenjin Chen, David J. Foran, Ilker Hacihaliloglu
             </p>
-            <p>
-              I'm a <strong>PhD student in Biomedical Engineering</strong> at the <strong>University of British Columbia</strong>, 
-              working under the supervision of <strong>Dr. Ilker Hacihaliloglu</strong> at the 
-              <a href="https://ultrai.med.ubc.ca/" target="_blank" class="link">UltrAi Lab</a>.
+            <p class="pub-venue">SPIE Medical Imaging 2027 | <span class="oral-badge">Oral presentation</span></p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2609.16551" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/moeinheidari7829/LUSVideoSSL" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Self-supervised learning (SSL) can reduce the need for labelled medical images, but the choice of pretext objective remains unclear for lung ultrasound (LUS). Contrastive learning, masked reconstruction, and joint-embedding predictive architectures (JEPA) differ in the space in which their targets are defined, yet existing ultrasound studies compare them under different corpora, backbones, and evaluation protocols. We compare these three objective families using the same encoder backbone, pretraining corpus, optimisation schedule, and frozen-evaluation protocol. Encoders are pretrained on COVID-BLUeS LUS videos and evaluated with linear, kNN, and attentive probes at 5%, 10%, 50%, and 100% label budgets. Evaluation is performed on POCUS using patient-level five-fold cross-validation and on the independently acquired Mendeley-Uganda dataset, which is excluded from both pretraining and probe fitting. At the full label budget under linear probing, VideoMAE and V-JEPA achieve 66.5 ± 13.1 and 65.4 ± 11.7 balanced accuracy on POCUS, while MoCo achieves 42.1 ± 1.2. On Mendeley-Uganda, the ranking reverses: MoCo performs best at 62.7 ± 1.0, followed by VideoMAE at 53.8 ± 2.8, while V-JEPA falls near chance at 35.1 ± 4.9. These results show that POCUS probe accuracy alone does not identify the objective that transfers best across datasets. We also outline planned representation-level analyses to examine this reversal. Code is publicly available at https://github.com/moeinheidari7829/LUSVideoSSL.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2026">
+          <div class="pub-media">
+            <img src="assets/every-pixel.png" alt="Every Pixel Is an Option teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title"><a href="every-pixel/">Every Pixel Is an Option: A System One Model for Medical Ultrasound Biometry</a></h3>
+            <p class="pub-authors">
+              <strong>Moein Heidari</strong>, Junbo Rao, Yudan Chen, Yasamin Medghalchi, River Jiang, Wenjin Chen, David J. Foran, Jasmine Grewal, Ilker Hacihaliloglu
             </p>
-            <p>
-              My research explores the frontiers of <strong>Computer Vision</strong>, <strong>Medical Imaging</strong>, 
-              and <strong>Deep Learning</strong>. I'm particularly interested in <strong>Implicit Neural Representations</strong>, 
-              <strong>Vision Transformers</strong>, <strong>Diffusion Models</strong>, <strong>AI Agents</strong>, 
-              and <strong>Large Language Models</strong> for medical applications.
+            <p class="pub-venue">arXiv preprint, 2026</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="every-pixel/">project</a>
+              <a class="pub-action-link" href="https://arxiv.org/abs/2611.03360" target="_blank" rel="noopener noreferrer">paper</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>**Purpose:** Ultrasound biometry is widely used across various clinical applications, including prenatal and cardiac examinations, to obtain quantitative measurements by placing calipers at anatomical landmarks. However, these measurements remain subject to interoperator variability as they rely largely on manual caliper placement. Conventional methods often use specialized prediction heads for different ultrasound tasks, whereas vision-language models offer flexibility through text instructions. However, direct coordinate prediction does not explicitly model spatial likelihood distributions, limiting the representation of localization ambiguity. **Methods:** We propose Kev-Bio, a vision-language model that uses clinical measurement questions to guide ultrasound landmark detection. Inspired by System One decision models, Kev-Bio uses decision representations of the language model to generate queries for each caliper endpoint. These queries are matched against shared dense ultrasound features to produce spatial probability maps, from which landmark coordinates and clinical measurements are derived. The model is trained end-to-end using both landmark localization and clinical measurement losses. **Results:** On the nine-view FU/GU Biometry 2026 dataset, Kev-Bio achieves a mean radial error (MRE) of 22.50 pixels and a clinical measurement mean absolute error (MAE) of 15.38, outperforming the compared baselines in overall performance. **Conclusion:** These results demonstrate the effectiveness of Kev-Bio for ultrasound landmark detection and clinical measurement across different anatomical views. Our code and models are available at https://github.com/moeinheidari7829/Kev-Bio.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2026">
+          <div class="pub-media pub-media-empty" aria-hidden="true"><span>Synthetic echocardiography data (JMI)</span></div>
+          <div class="pub-content">
+            <h3 class="pub-title">Incorporating Synthetic Data from Diffusion Models Supports Echocardiography Downstream Tasks</h3>
+            <p class="pub-authors">
+              Milad Yazdani, Pooria Ashrafian, <strong>Moein Heidari</strong>, Alireza Rafiei Sardouei, Dena Shahriari, Ilker Hacihaliloglu
             </p>
-            <p>
-              Currently, I'm developing an <em>agentic framework for echocardiography</em>, combining multimodal AI agents 
-              with advanced vision models to improve cardiac imaging analysis and diagnosis.
+            <p class="pub-venue">Journal of Medical Imaging (JMI), 2026</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://doi.org/10.1117/1.JMI.13.5.057002" target="_blank" rel="noopener noreferrer">paper</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Purpose: Large labeled echocardiography datasets are costly to collect. We use diffusion models to generate synthetic training data for segmentation and cardiac phase classification. Approach: We study three generation approaches on CAMUS: an unconditional image space model, a latent model conditioned on plain English prompts or abstract tokens, and a ControlNet model conditioned on an abstract token and segmentation mask. We evaluate synthesis with Fréchet inception distance (FID) and augmentation using segmentation and classification of end diastole and end systole. We also evaluate segmentation within CardiacUDC and directly from CAMUS to CardiacUDC. Results: Conditioning on an abstract token and segmentation mask gives the lowest mean FID, 1.5, compared with 3.2 for the semantic diffusion model. Abstract token augmentation gives the highest classification accuracy, improving ResNet-18 from 83.8% to 87.2% and VGG-16 from 74.5% to 78.7%. Synthetic augmentation gives the highest mean Dice of 87.6% for the CAMUS 2D U-Net and 84.6% for the CardiacUDC nnU-Net. When nnU-Net models are trained on CAMUS and evaluated directly on CardiacUDC, augmentation raises mean Dice from 74.6% to 75.2%. Conclusions: Incorporating synthetic images into training gives modest gains in CAMUS phase classification, segmentation within CAMUS and CardiacUDC, and direct segmentation from CAMUS to CardiacUDC.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post oral-paper" data-year="2026">
+          <div class="pub-media">
+            <img src="assets/wara.png" alt="WaRA teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title"><a href="wara/">WaRA: Wavelet Low-Rank Adaptation for Medical Image Classification</a></h3>
+            <p class="pub-authors">
+              <strong>Moein Heidari</strong>, Yijin Huang, Yasamin Medghalchi, Alireza Rafiei, Roger Tam, Ilker Hacihaliloglu
             </p>
-            <p>
-              I've had the privilege of collaborating with leading researchers from <strong>Stanford</strong>, <strong>RWTH Aachen</strong>, 
-              <strong>MILA</strong>, <strong>MBZUAI</strong>, and <strong>Rutgers</strong>, publishing at top-tier venues including 
-              <strong>CVPR</strong>, <strong>ICCV</strong>, <strong>MICCAI</strong>, <strong>WACV</strong>, 
-              and <strong>Medical Image Analysis</strong>.
+            <p class="pub-venue">MICCAI 2026 MIRASOL Workshop | <span class="oral-badge">Oral presentation</span> | <span class="award-badge"><i class="fas fa-trophy" aria-hidden="true"></i> Impact Award</span></p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="wara/">project</a>
+              <a class="pub-action-link" href="https://arxiv.org/abs/2506.24092" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/moeinheidari7829/WaRA" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Adapting large pretrained vision models to medical image classification is often limited by memory, computation, and task-specific specializations. Parameter-efficient fine-tuning (PEFT) methods like LoRA reduce this cost by learning low-rank updates, but operating directly in feature space can struggle to capture the localized, multi-scale features common in medical imaging. We propose WaRA, a wavelet-structured adaptation module that performs low-rank adaptation in a wavelet domain. WaRA reshapes patch tokens into a spatial grid, applies a fixed discrete wavelet transform, updates subband coefficients using a shared low-rank adapter, and reconstructs the additive update through an inverse wavelet transform. This design provides a compact trainable interface while biasing the update toward both coarse structure and fine detail. For extremely low-resource settings, we introduce Tiny-WaRA, which further reduces trainable parameters by learning only a small set of coefficients in a fixed basis derived from the pretrained weights through a truncated SVD. Experiments on medical image classification across four modalities and datasets demonstrate that WaRA consistently improves performance over strong PEFT baselines, while retaining a favorable efficiency profile. Our code is publicly available at https://github.com/moeinheidari7829/WaRA.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2026">
+          <div class="pub-media">
+            <img src="assets/echo-copilot.png" alt="Echo-CoPilot teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title"><a href="echo-copilot/">Echo-CoPilot: A Multiple-Perspective Agentic Framework for Reliable Echocardiography Interpretation</a></h3>
+            <p class="pub-authors">
+              <strong>Moein Heidari</strong>, Ali Mehrabian, Mohammad Amin Roohi, River Jiang, Wenjin Chen, David J. Foran, Jasmine Grewal, Ilker Hacihaliloglu
             </p>
-          </div>
-          
-          <div class="research-areas">
-            <h3>Research Interests</h3>
-            <div class="research-tags">
-              <span class="research-tag">Computer Vision</span>
-              <span class="research-tag">Medical Imaging</span>
-              <span class="research-tag">Implicit Neural Representations</span>
-              <span class="research-tag">Vision Transformers</span>
-              <span class="research-tag">Diffusion Models</span>
-              <span class="research-tag">AI Agents</span>
-              <span class="research-tag">Large Language Models</span>
-              <span class="research-tag">Deep Learning</span>
+            <p class="pub-venue">MICCAI 2026 Agentic AI for Medicine Workshop</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="echo-copilot/">project</a>
+              <a class="pub-action-link" href="https://arxiv.org/abs/2512.09944" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/moeinheidari7829/Echo-CoPilot" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Echocardiography interpretation requires integrating multi-view temporal evidence with quantitative measurements and guideline-grounded reasoning, yet existing foundation-model pipelines largely solve isolated subtasks and fail when tool outputs are noisy or values fall near clinical cutoffs. We propose Echo-CoPilot, an end-to-end agentic framework that combines a multi-perspective workflow with knowledge-graph-guided measurement selection. Echo-CoPilot runs three independent ReAct-style agents, structural, pathological, and quantitative, that invoke specialized echocardiography tools to extract parameters while querying EchoKG to determine which measurements are required for the clinical question and which should be avoided. A self-contrast language model then compares the evidence-grounded perspectives, generates a discrepancy checklist, and re-queries EchoKG to apply the appropriate guideline thresholds and resolve conflicts, reducing hallucinated measurement selection and borderline flip-flops. On MIMICEchoQA, Echo-CoPilot provides higher accuracy compared to SOTA baselines and, under a stochasticity stress test, achieves higher reliability through more consistent conclusions and fewer answer changes across repeated runs. Our code is publicly available at https://github.com/moeinheidari7829/Echo-CoPilot.</p>
+                </div>
+              </details>
             </div>
           </div>
+        </article>
+
+        <article class="post" data-year="2026">
+          <div class="pub-media">
+            <img src="assets/xtinyunet.png" alt="XTinyU-Net teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">XTinyU-Net: Training-Free U-Net Scaling via Initialization-Time Sensitivity</h3>
+            <p class="pub-authors">
+              Alvin Kimbowa*, <strong>Moein Heidari*</strong>, David Liu, Ilker Hacihaliloglu
+              <br><span class="pub-author-note">* Equal contribution</span>
+            </p>
+            <p class="pub-venue">MICCAI 2026 (early accept)</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2605.09639" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/alvinkimbowa/xtinyunet" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>While U-Net architectures remain the gold standard for medical image segmentation, their deployment in resource-constrained environments demands aggressive model compression. However, finding an optimally efficient configuration is computationally prohibitive, typically requiring exhaustive train-and-evaluate cycles to find the smallest model that maintains peak performance. In this paper, we introduce a training-free selection framework to automatically identify ultralightweight, dataset-specific U-Net configurations directly at initialization. We observe that systematically scaling down U-Net channel width induces a sharp transition from a stable performance plateau to representational capacity collapse. To pinpoint this boundary without training, we propose a Jacobian-based sensitivity metric that scores discrete, width-capped U-Net variants using a small set of unlabeled images. By analyzing the total variation of this sensitivity curve, we isolate the smallest stable configuration, which we denote as XTinyU-Net. Evaluated across six diverse medical datasets within the nnU-Net framework, XTinyU-Net achieves segmentation accuracy comparable to the heavy nnU-Net baseline with 400x-1600x fewer parameters, and outperforms contemporary lightweight architectures while utilizing 5x-72x fewer parameters. Code is publicly accessible on https://github.com/alvinkimbowa/nntinyunet.git.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2026">
+          <div class="pub-media">
+            <img src="assets/malvil.png" alt="MaLViL teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">MaLViL: Multi-axis Low-rank Vision-LSTM for Medical Image Segmentation</h3>
+            <p class="pub-authors">
+              Afshin Bozorgpour, Sina Ghorbani Kolahi, <strong>Moein Heidari</strong>, Ilker Hacihaliloglu, Dorit Merhof
+            </p>
+            <p class="pub-venue">MICCAI 2026 MLMI Workshop</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2608.17635" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/xmindflow/malvil" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Vision-LSTM (ViL) enables efficient global modeling, but its cost still scales with the number of spatial tokens, so existing segmenters confine ViL to a coarse bottleneck and lose fine anatomical detail. Rasterizing 2D features into a 1D sequence further breaks adjacency across the orthogonal scan axis. We propose MaLViL, a Multi-axis Low-rank Vision-LSTM network that extends ViL across decoder resolutions. Bidirectional low-rank ViL (Bi-LRViL) reasons on a compact orthonormal subspace and preserves detail through an orthogonal residual; scale-aware SaLViL restores cross-axis neighbors before serialization; and a Cross-Directional Mixer (CDM) fuses orthogonal horizontal and vertical traversal paths. Statistics-Guided Skip Modulation (SGSM) further retains boundary cues in encoder skips. On skin-lesion, ultrasound, and multi-organ CT benchmarks, MaLViL achieves competitive or state-of-the-art segmentation accuracy, while reducing ViL operator memory by up to 83× at fine decoder resolutions. Code is available at: https://github.com/xmindflow/malvil.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2026">
+          <div class="pub-media">
+            <img src="assets/echo-e3net.png" alt="Echo-E³Net teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title"><a href="echo-e3net/">Echo-E³Net: Efficient Endocardial Spatio-Temporal Network for Ejection Fraction Estimation</a></h3>
+            <p class="pub-authors">
+              <strong>Moein Heidari*</strong>, Afshin Bozorgpour*, AmirHossein Zarif-Fakharnia, Wenjin Chen, Dorit Merhof, David J. Foran, Jasmine Grewal, Ilker Hacihaliloglu
+              <br><span class="pub-author-note">* Equal contribution</span>
+            </p>
+            <p class="pub-venue">MICCAI 2026 ASMUS Workshop</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="echo-e3net/">project</a>
+              <a class="pub-action-link" href="https://arxiv.org/abs/2503.17543" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/moeinheidari7829/Echo-E3Net" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Left ventricular ejection fraction (LVEF) is a primary marker of cardiac function. However, routine estimation from endocardial measurements requires manual delineation at end-diastole (ED) and end-systole (ES), a process that is time-consuming and subject to inter-observer variability. Reliable automation is especially valuable for point-of-care ultrasound (POCUS), where computational resources are limited and acquisition quality varies. We propose Echo-E³Net, an anatomy-guided spatio-temporal network that explicitly embeds cardiac anatomy into LVEF prediction. A dual-phase Endocardial Border Detector (E²CBD) uses phase-specific cross-attention to localize ED/ES endocardial landmarks and produce phase-aware landmark embeddings, while an Endocardial Feature Aggregator (E²FA) fuses these embeddings with global statistical descriptors of deep feature maps to refine EF regression. Training is guided by a lightweight geometric loss that uses ED and ES endocardial landmarks to regularize EF prediction. On EchoNet-Dynamic and a PSAX subset of EchoNet-Pediatric, Echo-E³Net attains competitive performance using only 1.55M parameters and 8.05 GFLOPs, an order-of-magnitude compute reduction versus recent baselines, supporting real-time deployment. Our code is publicly available at https://github.com/moeinheidari7829/Echo-E3Net.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2025">
+          <div class="pub-media">
+            <img src="assets/prompt2perturb.png" alt="Prompt2Perturb teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">Prompt2Perturb (P2P): Text-Guided Diffusion-Based Adversarial Attacks on Breast Ultrasound Images</h3>
+            <p class="pub-authors">
+              Yasamin Medghalchi, <strong>Moein Heidari</strong>, Clayton Allard, Leonid Sigal, Ilker Hacihaliloglu
+            </p>
+            <p class="pub-venue">CVPR 2025</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2412.09910" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/yasamin-med/P2P" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Deep neural networks (DNNs) offer significant promise for improving breast cancer diagnosis in medical imaging. However, these models are highly susceptible to adversarial attacks--small, imperceptible changes that can mislead classifiers--raising critical concerns about their reliability and security. Traditional attacks rely on fixed-norm perturbations, misaligning with human perception. In contrast, diffusion-based attacks require pre-trained models, demanding substantial data when these models are unavailable, limiting practical use in data-scarce scenarios. In medical imaging, however, this is often unfeasible due to the limited availability of datasets. Building on recent advancements in learnable prompts, we propose Prompt2Perturb (P2P), a novel language-guided attack method capable of generating meaningful attack examples driven by text instructions. During the prompt learning phase, our approach leverages learnable prompts within the text encoder to create subtle, yet impactful, perturbations that remain imperceptible while guiding the model towards targeted outcomes. In contrast to current prompt learning-based approaches, our P2P stands out by directly updating text embeddings, avoiding the need for retraining diffusion models. Further, we leverage the finding that optimizing only the early reverse diffusion steps boosts efficiency while ensuring that the generated adversarial examples incorporate subtle noise, thus preserving ultrasound image quality without introducing noticeable artifacts. We show that our method outperforms state-of-the-art attack techniques across three breast ultrasound datasets in FID and LPIPS. Moreover, the generated images are both more natural in appearance and more effective compared to existing adversarial attacks. Our code will be publicly available https://github.com/yasamin-med/P2P.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2025">
+          <div class="pub-media">
+            <img src="assets/SL2A-teaser.png" alt="SL²A-INR teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title"><a href="https://moeinheidari7829.github.io/SL2A-INR/">SL²A-INR: Single-Layer Learnable Activation for Implicit Neural Representation</a></h3>
+            <p class="pub-authors">
+              <strong>Moein Heidari*</strong>, Reza Rezaeian*, Reza Azad, Dorit Merhof, Hamid Soltanian-Zadeh, Ilker Hacihaliloglu
+              <br><span class="pub-author-note">* Equal contribution</span>
+            </p>
+            <p class="pub-venue">ICCV 2025</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://moeinheidari7829.github.io/SL2A-INR/" target="_blank" rel="noopener noreferrer">project</a>
+              <a class="pub-action-link" href="https://arxiv.org/abs/2409.10836" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/Iceage7/SL2A-INR" target="_blank" rel="noopener noreferrer">code</a>
+              <a class="pub-action-link" href="https://www.youtube.com/watch?v=5dlaTW0P8YY" target="_blank" rel="noopener noreferrer">video</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Implicit Neural Representation (INR), leveraging a neural network to transform coordinate input into corresponding attributes, has recently driven significant advances in several vision-related domains. However, the performance of INR is heavily influenced by the choice of the nonlinear activation function used in its multilayer perceptron (MLP) architecture. To date, multiple nonlinearities have been investigated, but current INRs still face limitations in capturing high-frequency components and diverse signal types. We show that these challenges can be alleviated by introducing a novel approach in INR architecture. Specifically, we propose SL²A-INR, a hybrid network that combines a single-layer learnable activation function with an MLP that uses traditional ReLU activations. Our method performs superior across diverse tasks, including image representation, 3D shape reconstruction, and novel view synthesis. Through comprehensive experiments, SL²A-INR sets new benchmarks in accuracy, quality, and robustness for INR. Our Code is publicly available on GitHub.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2025">
+          <div class="pub-media">
+            <img src="assets/fourier-kan.png" alt="Fourier KAN teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">Implicit Neural Representations with Fourier Kolmogorov-Arnold Networks</h3>
+            <p class="pub-authors">
+              Ali Mehrabian, Parsa Mojarad Adi, <strong>Moein Heidari</strong>, Ilker Hacihaliloglu
+            </p>
+            <p class="pub-venue">ICASSP 2025</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2409.09323" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/Ali-Meh619/FKAN" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Implicit neural representations (INRs) use neural networks to provide continuous and resolution-independent representations of complex signals with a small number of parameters. However, existing INR models often fail to capture important frequency components specific to each task. To address this issue, in this paper, we propose a Fourier Kolmogorov Arnold network (FKAN) for INRs. The proposed FKAN utilizes learnable activation functions modeled as Fourier series in the first layer to effectively control and learn the task-specific frequency components. In addition, the activation functions with learnable Fourier coefficients improve the ability of the network to capture complex patterns and details, which is beneficial for high-resolution and high-dimensional data. Experimental results show that our proposed FKAN model outperforms three state-of-the-art baseline schemes, and improves the peak signal-to-noise ratio (PSNR) and structural similarity index measure (SSIM) for the image representation task and intersection over union (IoU) for the 3D occupancy volume representation task, respectively. The code is available at github.com/Ali-Meh619/FKAN.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2025">
+          <div class="pub-media">
+            <img src="assets/SPIE.png" alt="U-Net modifications for retroperitoneal tumor segmentation teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title"><a href="retroperitoneal-unet/">A Study on the Performance of U-Net Modifications in Retroperitoneal Tumor Segmentation</a></h3>
+            <p class="pub-authors">
+              <strong>Moein Heidari</strong>, Ehsan Khodapanah Aghdam, Alexander Manzella, Daniel Hsu, Rebecca Scalabrino, Wenjin Chen, David J. Foran, Ilker Hacihaliloglu
+            </p>
+            <p class="pub-venue">SPIE Medical Imaging 2025</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="retroperitoneal-unet/">project</a>
+              <a class="pub-action-link" href="https://arxiv.org/abs/2502.00314" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/moeinheidari7829/Retroperitoneal_Tumour_Segmentation_SPIE2025" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>The retroperitoneum hosts a variety of tumors, including rare benign and malignant types, which pose diagnostic and treatment challenges due to their infrequency and proximity to vital structures. Estimating tumor volume is difficult due to their irregular shapes, and manual segmentation is time-consuming. Automatic segmentation using U-Net and its variants, incorporating Vision Transformer (ViT) elements, has shown promising results but struggles with high computational demands. To address this, architectures like the Mamba State Space Model (SSM) and Extended Long-Short Term Memory (xLSTM) offer efficient solutions by handling long-range dependencies with lower resource consumption. This study evaluates U-Net enhancements, including CNN, ViT, Mamba, and xLSTM, on a new in-house CT dataset and a public organ segmentation dataset. The proposed ViLU-Net model integrates Vi-blocks for improved segmentation. Results highlight xLSTM's efficiency in the U-Net framework. The code is publicly accessible on GitHub.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2024">
+          <div class="pub-media">
+            <img src="assets/MSA2Net-1.png" alt="MSA²Net teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">MSA²Net: Multi-scale Adaptive Attention-guided Network for Medical Image Segmentation</h3>
+            <p class="pub-authors">
+              Sina Ghorbani Kolahi, Seyed Kamal Chaharsooghi, Toktam Khatibi, Afshin Bozorgpour, Reza Azad, <strong>Moein Heidari</strong>, Ilker Hacihaliloglu, Dorit Merhof
+            </p>
+            <p class="pub-venue">BMVC 2024</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2407.21640" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/xmindflow/MSA-2Net" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Medical image segmentation involves identifying and separating object instances in a medical image to delineate various tissues and structures, a task complicated by the significant variations in size, shape, and density of these features. Convolutional neural networks (CNNs) have traditionally been used for this task but have limitations in capturing long-range dependencies. Transformers, equipped with self-attention mechanisms, aim to address this problem. However, in medical image segmentation it is beneficial to merge both local and global features to effectively integrate feature maps across various scales, capturing both detailed features and broader semantic elements for dealing with variations in structures. In this paper, we introduce MSA²Net, a new deep segmentation framework featuring an expedient design of skip-connections. These connections facilitate feature fusion by dynamically weighting and combining coarse-grained encoder features with fine-grained decoder feature maps. Specifically, we propose a Multi-Scale Adaptive Spatial Attention Gate (MASAG), which dynamically adjusts the receptive field (Local and Global contextual information) to ensure that spatially relevant features are selectively highlighted while minimizing background distractions. Extensive evaluations involving dermatology, and radiological datasets demonstrate that our MSA²Net outperforms state-of-the-art (SOTA) works or matches their performance. The source code is publicly available at https://github.com/xmindflow/MSA-2Net.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2024">
+          <div class="pub-media">
+            <img src="assets/mamba-survey.png" alt="State space models survey teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title"><a href="ssm-survey/">Computation-Efficient Era: A Comprehensive Survey of State Space Models in Medical Image Analysis</a></h3>
+            <p class="pub-authors">
+              <strong>Moein Heidari</strong>, Sina Ghorbani Kolahi, Sanaz Karimijafarbigloo, Bobby Azad, Afshin Bozorgpour, Soheila Hatami, Reza Azad, Ali Diba, Ulas Bagci, Dorit Merhof
+            </p>
+            <p class="pub-venue">arXiv preprint, 2024</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="ssm-survey/">project</a>
+              <a class="pub-action-link" href="https://arxiv.org/abs/2406.03430" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/xmindflow/Awesome_Mamba" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Sequence modeling plays a vital role across various domains, with recurrent neural networks being historically the predominant method of performing these tasks. However, the emergence of transformers has altered this paradigm due to their superior performance. Built upon these advances, transformers have conjoined CNNs as two leading foundational models for learning visual representations. However, transformers are hindered by the O(N²) complexity of their attention mechanisms, while CNNs lack global receptive fields and dynamic weight allocation. State Space Models (SSMs), specifically the Mamba model with selection mechanisms and hardware-aware architecture, have garnered immense interest lately in sequential modeling and visual representation learning, challenging the dominance of transformers by providing infinite context lengths and offering substantial efficiency maintaining linear complexity in the input sequence. Capitalizing on the advances in computer vision, medical imaging has heralded a new epoch with Mamba models. Intending to help researchers navigate the surge, this survey seeks to offer an encyclopedic review of Mamba models in medical imaging. Specifically, we start with a comprehensive theoretical review forming the basis of SSMs, including Mamba architecture and its alternatives for sequence modeling paradigms in this context. Next, we offer a structured classification of Mamba models in the medical field and introduce a diverse categorization scheme based on their application, imaging modalities, and targeted organs. Finally, we summarize key challenges, discuss different future research directions of the SSMs in the medical domain, and propose several directions to fulfill the demands of this field. In addition, we have compiled the studies discussed in this paper along with their open-source implementations on our GitHub repository.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2024">
+          <div class="pub-media">
+            <img src="assets/efficiency-survey.png" alt="Efficient vision transformers teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title"><a href="vit-efficiency/">Enhancing Efficiency in Vision Transformer Networks: Design Techniques and Insights</a></h3>
+            <p class="pub-authors">
+              <strong>Moein Heidari</strong>, Reza Azad, Sina Ghorbani Kolahi, René Arimond, Leon Niggemeier, Alaa Sulaiman, Afshin Bozorgpour, Ehsan Khodapanah Aghdam, Amirhossein Kazerouni, Ilker Hacihaliloglu, Dorit Merhof
+            </p>
+            <p class="pub-venue">arXiv preprint, 2024</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="vit-efficiency/">project</a>
+              <a class="pub-action-link" href="https://arxiv.org/abs/2403.19882" target="_blank" rel="noopener noreferrer">paper</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Intrigued by the inherent ability of the human visual system to identify salient regions in complex scenes, attention mechanisms have been seamlessly integrated into various Computer Vision (CV) tasks. Building upon this paradigm, Vision Transformer (ViT) networks exploit attention mechanisms for improved efficiency. This review navigates the landscape of redesigned attention mechanisms within ViTs, aiming to enhance their performance. This paper provides a comprehensive exploration of techniques and insights for designing attention mechanisms, systematically reviewing recent literature in the field of CV. This survey begins with an introduction to the theoretical foundations and fundamental concepts underlying attention mechanisms. We then present a systematic taxonomy of various attention mechanisms within ViTs, employing redesigned approaches. A multi-perspective categorization is proposed based on their application, objectives, and the type of attention applied. The analysis includes an exploration of the novelty, strengths, weaknesses, and an in-depth evaluation of the different proposed strategies. This culminates in the development of taxonomies that highlight key properties and contributions. Finally, we gather the reviewed studies along with their available open-source implementations at our GitHub. We aim to regularly update it with the most recent relevant papers.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2024">
+          <div class="pub-media">
+            <img src="assets/VLUS.png" alt="Vision-language synthetic echocardiography teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">Vision-Language Synthetic Data Enhances Echocardiography Downstream Tasks</h3>
+            <p class="pub-authors">
+              Pooria Ashrafian, Milad Yazdani, <strong>Moein Heidari</strong>, Dena Shahriari, Ilker Hacihaliloglu
+            </p>
+            <p class="pub-venue">arXiv preprint, 2024</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2403.19880" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/Pooria90/DiffEcho" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>High-quality, large-scale data is essential for robust deep learning models in medical applications, particularly ultrasound image analysis. Diffusion models facilitate high-fidelity medical image generation, reducing the costs associated with acquiring and annotating new images. This paper utilizes recent vision-language models to produce diverse and realistic synthetic echocardiography image data, preserving key features of the original images guided by textual and semantic label maps. Specifically, we investigate three potential avenues: unconditional generation, generation guided by text, and a hybrid approach incorporating both textual and semantic supervision. We show that the rich contextual information present in the synthesized data potentially enhances the accuracy and interpretability of downstream tasks, such as echocardiography segmentation and classification with improved metrics and faster convergence. Our implementation with checkpoints, prompts, and the created synthetic dataset will be publicly available at GitHub.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2024">
+          <div class="pub-media">
+            <img src="assets/vit_survey_teaser.png" alt="Vision transformers review teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">Advances in Medical Image Analysis with Vision Transformers: A Comprehensive Review</h3>
+            <p class="pub-authors">
+              Reza Azad, Amirhossein Kazerouni, <strong>Moein Heidari</strong>, Ehsan Khodapanah Aghdam, Amirali Molaei, Yiwei Jia, Abin Jose, Rijo Roy, Dorit Merhof
+            </p>
+            <p class="pub-venue">Medical Image Analysis (MedIA), 2024</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2301.03505" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/xmindflow/Awesome-Transformer-in-Medical-Imaging" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>The remarkable performance of the Transformer architecture in natural language processing has recently also triggered broad interest in Computer Vision. Among other merits, Transformers are witnessed as capable of learning long-range dependencies and spatial correlations, which is a clear advantage over convolutional neural networks (CNNs), which have been the de facto standard in Computer Vision problems so far. Thus, Transformers have become an integral part of modern medical image analysis. In this review, we provide an encyclopedic review of the applications of Transformers in medical imaging. Specifically, we present a systematic and thorough review of relevant recent Transformer literature for different medical image analysis tasks, including classification, segmentation, detection, registration, synthesis, and clinical report generation. For each of these applications, we investigate the novelty, strengths and weaknesses of the different proposed strategies and develop taxonomies highlighting key properties and contributions. Further, if applicable, we outline current benchmarks on different datasets. Finally, we summarize key challenges and discuss different future research directions. In addition, we have provided cited papers with their corresponding implementations in https://github.com/mindflow-institue/Awesome-Transformer.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post oral-paper" data-year="2023">
+          <div class="pub-media">
+            <img src="assets/sa2-net.png" alt="SA²-Net teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">SA²-Net: Scale-aware Attention Network for Microscopic Image Segmentation</h3>
+            <p class="pub-authors">
+              Mustansar Fiaz, <strong>Moein Heidari</strong>, Rao Muhammad Anwer, Hisham Cholakkal
+            </p>
+            <p class="pub-venue">BMVC 2023 | <span class="oral-badge">Oral presentation</span></p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2309.16661" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/mustansarfiaz/SA2-Net" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Microscopic image segmentation is a challenging task, wherein the objective is to assign semantic labels to each pixel in a given microscopic image. While convolutional neural networks (CNNs) form the foundation of many existing frameworks, they often struggle to explicitly capture long-range dependencies. Although transformers were initially devised to address this issue using self-attention, it has been proven that both local and global features are crucial for addressing diverse challenges in microscopic images, including variations in shape, size, appearance, and target region density. In this paper, we introduce SA2-Net, an attention-guided method that leverages multi-scale feature learning to effectively handle diverse structures within microscopic images. Specifically, we propose scale-aware attention (SA2) module designed to capture inherent variations in scales and shapes of microscopic regions, such as cells, for accurate segmentation. This module incorporates local attention at each level of multi-stage features, as well as global attention across multiple resolutions. Furthermore, we address the issue of blurred region boundaries (e.g., cell boundaries) by introducing a novel upsampling strategy called the Adaptive Up-Attention (AuA) module. This module enhances the discriminative ability for improved localization of microscopic regions using an explicit attention mechanism. Extensive experiments on five challenging datasets demonstrate the benefits of our SA2-Net model. Our source code is publicly available at https://github.com/mustansarfiaz/SA2-Net.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2023">
+          <div class="pub-media">
+            <img src="assets/hiformer_teaser.png" alt="HiFormer teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title"><a href="hiformer/">HiFormer: Hierarchical Multi-scale Representations Using Transformers for Medical Image Segmentation</a></h3>
+            <p class="pub-authors">
+              <strong>Moein Heidari*</strong>, Amirhossein Kazerouni*, Milad Soltany*, Reza Azad, Ehsan Khodapanah Aghdam, Julien Cohen-Adad, Dorit Merhof
+              <br><span class="pub-author-note">* Equal contribution</span>
+            </p>
+            <p class="pub-venue">WACV 2023</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="hiformer/">project</a>
+              <a class="pub-action-link" href="https://arxiv.org/abs/2207.08518" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/amirhossein-kz/HiFormer" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Convolutional neural networks (CNNs) have been the consensus for medical image segmentation tasks. However, they suffer from the limitation in modeling long-range dependencies and spatial correlations due to the nature of convolution operation. Although transformers were first developed to address this issue, they fail to capture low-level features. In contrast, it is demonstrated that both local and global features are crucial for dense prediction, such as segmenting in challenging contexts. In this paper, we propose HiFormer, a novel method that efficiently bridges a CNN and a transformer for medical image segmentation. Specifically, we design two multi-scale feature representations using the seminal Swin Transformer module and a CNN-based encoder. To secure a fine fusion of global and local features obtained from the two aforementioned representations, we propose a Double-Level Fusion (DLF) module in the skip connection of the encoder-decoder structure. Extensive experiments on various medical image segmentation datasets demonstrate the effectiveness of HiFormer over other CNN-based, transformer-based, and hybrid methods in terms of computational complexity, and quantitative and qualitative results. Our code is publicly available at: https://github.com/amirhossein-kz/HiFormer</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2023">
+          <div class="pub-media">
+            <img src="assets/diffusion_survey_teaser.png" alt="Diffusion models survey teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">Diffusion Models in Medical Imaging: A Comprehensive Survey</h3>
+            <p class="pub-authors">
+              Amirhossein Kazerouni, Ehsan Khodapanah Aghdam, <strong>Moein Heidari</strong>, Reza Azad, Mohsen Fayyaz, Ilker Hacihaliloglu, Dorit Merhof
+            </p>
+            <p class="pub-venue">Medical Image Analysis (MedIA), 2023</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2211.07804" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/amirhossein-kz/Awesome-Diffusion-Models-in-Medical-Imaging" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Denoising diffusion models, a class of generative models, have garnered immense interest lately in various deep-learning problems. A diffusion probabilistic model defines a forward diffusion stage where the input data is gradually perturbed over several steps by adding Gaussian noise and then learns to reverse the diffusion process to retrieve the desired noise-free data from noisy data samples. Diffusion models are widely appreciated for their strong mode coverage and quality of the generated samples despite their known computational burdens. Capitalizing on the advances in computer vision, the field of medical imaging has also observed a growing interest in diffusion models. To help the researcher navigate this profusion, this survey intends to provide a comprehensive overview of diffusion models in the discipline of medical image analysis. Specifically, we introduce the solid theoretical foundation and fundamental concepts behind diffusion models and the three generic diffusion modelling frameworks: diffusion probabilistic models, noise-conditioned score networks, and stochastic differential equations. Then, we provide a systematic taxonomy of diffusion models in the medical domain and propose a multi-perspective categorization based on their application, imaging modality, organ of interest, and algorithms. To this end, we cover extensive applications of diffusion models in the medical domain. Furthermore, we emphasize the practical use case of some selected approaches, and then we discuss the limitations of the diffusion models in the medical domain and propose several directions to fulfill the demands of this field. Finally, we gather the overviewed studies with their available open-source implementations at https://github.com/amirhossein-kz/Awesome-Diffusion-Models-in-Medical-Imaging.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2023">
+          <div class="pub-media">
+            <img src="assets/DiffGANPaint.png" alt="DiffGANPaint teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title"><a href="diffganpaint/">DiffGANPaint: Fast Inpainting Using Denoising Diffusion GANs</a></h3>
+            <p class="pub-authors">
+              <strong>Moein Heidari</strong>, Alireza Morsali, Tohid Abedini, Samin Heydarian
+            </p>
+            <p class="pub-venue">ICLR 2023 Tiny Papers</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="diffganpaint/">project</a>
+              <a class="pub-action-link" href="https://arxiv.org/abs/2311.11469" target="_blank" rel="noopener noreferrer">paper</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Free-form image inpainting is the task of reconstructing parts of an image specified by an arbitrary binary mask. In this task, it is typically desired to generalize model capabilities to unseen mask types, rather than learning certain mask distributions. Capitalizing on the advances in diffusion models, in this paper, we propose a Denoising Diffusion Probabilistic Model (DDPM) based model capable of filling missing pixels fast as it models the backward diffusion process using the generator of a generative adversarial network (GAN) network to reduce sampling cost in diffusion models. Experiments on general-purpose image inpainting datasets verify that our approach performs superior or on par with most contemporary works.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2023">
+          <div class="pub-media">
+            <img src="assets/MLP-Attention.png" alt="MLP-Attention teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">MLP-Attention: Improving Transformer Architecture with MLP Attention Weights</h3>
+            <p class="pub-authors">
+              Alireza Morsali, <strong>Moein Heidari</strong>, Samin Heydarian, Tohid Abedini
+            </p>
+            <p class="pub-venue">ICLR 2023 Tiny Papers</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://openreview.net/forum?id=99XvUeDFYTD" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/AlirezaMorsali/MLP-Attention" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>The Transformer architecture has revolutionized natural language processing (NLP) and has achieved state-of-the-art results in various tasks. The attention mechanism is one of the key components of the Transformer architecture, which allows the model to focus on relevant parts of the input. In the standard Transformer, the attention weights are computed by the dot product of query and key vectors followed by a softmax function. However, in this paper, we propose to replace the dot product of query and key vectors with a multi-layer perceptron (MLP) to compute attention weights directly from the embeddings. The proposed modification is simple and can be easily implemented in existing Transformer-based models to improve their performance as shown in this paper for an NLP task. We provide the implementation code at https://github.com/AlirezaMorsali/MLP-Attention for reproducibility and ease of adoption.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2023">
+          <div class="pub-media">
+            <img src="assets/loss-survey.png" alt="Segmentation loss functions survey teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">Loss Functions in the Era of Semantic Segmentation: A Survey and Outlook</h3>
+            <p class="pub-authors">
+              Reza Azad, <strong>Moein Heidari</strong>, Kadir Yilmaz, Michael Hüttemann, Sanaz Karimijafarbigloo, Yuli Wu, Anke Schmeink, Dorit Merhof
+            </p>
+            <p class="pub-venue">arXiv preprint, 2023</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2312.05391" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/YilmazKadir/Segmentation_Losses" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Semantic image segmentation, the process of classifying each pixel in an image into a particular class, plays an important role in many visual understanding systems. As the predominant criterion for evaluating the performance of statistical models, loss functions are crucial for shaping the development of deep learning-based segmentation algorithms and improving their overall performance. To aid researchers in identifying the optimal loss function for their particular application, this survey provides a comprehensive and unified review of 25 loss functions utilized in image segmentation. We provide a novel taxonomy and thorough review of how these loss functions are customized and leveraged in image segmentation, with a systematic categorization emphasizing their significant features and applications. Furthermore, to evaluate the efficacy of these methods in real-world scenarios, we propose unbiased evaluations of some distinct and renowned loss functions on established medical and natural image datasets. We conclude this review by identifying current challenges and unveiling future research opportunities. Finally, we have compiled the reviewed studies that have open-source implementations on our GitHub page.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2022">
+          <div class="pub-media">
+            <img src="assets/contexual.png" alt="Contextual Attention Network teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">Contextual Attention Network: Transformer Meets U-Net</h3>
+            <p class="pub-authors">
+              Reza Azad, <strong>Moein Heidari</strong>, Yuli Wu, Dorit Merhof
+            </p>
+            <p class="pub-venue">MICCAI 2022 MLMI Workshop</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2203.01932" target="_blank" rel="noopener noreferrer">paper</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Currently, convolutional neural networks (CNN) (e.g., U-Net) have become the de facto standard and attained immense success in medical image segmentation. However, as a downside, CNN based methods are a double-edged sword as they fail to build long-range dependencies and global context connections due to the limited receptive field that stems from the intrinsic characteristics of the convolution operation. Hence, recent articles have exploited Transformer variants for medical image segmentation tasks which open up great opportunities due to their innate capability of capturing long-range correlations through the attention mechanism. Although being feasibly designed, most of the cohort studies incur prohibitive performance in capturing local information, thereby resulting in less lucidness of boundary areas. In this paper, we propose a contextual attention network to tackle the aforementioned limitations. The proposed method uses the strength of the Transformer module to model the long-range contextual dependency. Simultaneously, it utilizes the CNN encoder to capture local semantic information. In addition, an object-level representation is included to model the regional interaction map. The extracted hierarchical features are then fed to the contextual attention module to adaptively recalibrate the representation space using the local information. Then, they emphasize the informative regions while taking into account the long-range contextual dependency derived by the Transformer module. We validate our method on several large-scale public medical image segmentation datasets and achieve state-of-the-art performance. We have provided the implementation code in https://github.com/rezazad68/TMUnet.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2022">
+          <div class="pub-media">
+            <img src="assets/intervertebral.png" alt="Intervertebral disc labeling teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">Intervertebral Disc Labeling With Learning Shape Information, A Look Once Approach</h3>
+            <p class="pub-authors">
+              Reza Azad, <strong>Moein Heidari</strong>, Julien Cohen-Adad, Ehsan Adeli, Dorit Merhof
+            </p>
+            <p class="pub-venue">MICCAI 2022 PRIME Workshop</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2204.02943" target="_blank" rel="noopener noreferrer">paper</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Accurate and automatic segmentation of intervertebral discs from medical images is a critical task for the assessment of spine-related diseases such as osteoporosis, vertebral fractures, and intervertebral disc herniation. To date, various approaches have been developed in the literature which routinely relies on detecting the discs as the primary step. A disadvantage of many cohort studies is that the localization algorithm also yields false-positive detections. In this study, we aim to alleviate this problem by proposing a novel U-Net-based structure to predict a set of candidates for intervertebral disc locations. In our design, we integrate the image shape information (image gradients) to encourage the model to learn rich and generic geometrical information. This additional signal guides the model to selectively emphasize the contextual representation and suppress the less discriminative features. On the post-processing side, to further decrease the false positive rate, we propose a permutation invariant 'look once' model, which accelerates the candidate recovery procedure. In comparison with previous studies, our proposed approach does not need to perform the selection in an iterative fashion. The proposed method was evaluated on the spine generic public multi-center dataset and demonstrated superior performance compared to previous work. We have provided the implementation code in https://github.com/rezazad68/intervertebral-lookonce</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2022">
+          <div class="pub-media">
+            <img src="assets/proposed_deeplab_model-1.png" alt="TransDeepLab teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">TransDeepLab: Convolution-Free Transformer-based DeepLab v3+ for Medical Image Segmentation</h3>
+            <p class="pub-authors">
+              Reza Azad, <strong>Moein Heidari</strong>, Moein Shariatnia, Ehsan Khodapanah Aghdam, Sanaz Karimijafarbigloo, Ehsan Adeli, Dorit Merhof
+            </p>
+            <p class="pub-venue">MICCAI 2022 PRIME Workshop</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://arxiv.org/abs/2208.00713" target="_blank" rel="noopener noreferrer">paper</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Convolutional neural networks (CNNs) have been the de facto standard in a diverse set of computer vision tasks for many years. Especially, deep neural networks based on seminal architectures such as U-shaped models with skip-connections or atrous convolution with pyramid pooling have been tailored to a wide range of medical image analysis tasks. The main advantage of such architectures is that they are prone to detaining versatile local features. However, as a general consensus, CNNs fail to capture long-range dependencies and spatial correlations due to the intrinsic property of confined receptive field size of convolution operations. Alternatively, Transformer, profiting from global information modelling that stems from the self-attention mechanism, has recently attained remarkable performance in natural language processing and computer vision. Nevertheless, previous studies prove that both local and global features are critical for a deep model in dense prediction, such as segmenting complicated structures with disparate shapes and configurations. To this end, this paper proposes TransDeepLab, a novel DeepLab-like pure Transformer for medical image segmentation. Specifically, we exploit hierarchical Swin-Transformer with shifted windows to extend the DeepLabv3 and model the Atrous Spatial Pyramid Pooling (ASPP) module. A thorough search of the relevant literature yielded that we are the first to model the seminal DeepLab model with a pure Transformer-based model. Extensive experiments on various medical image segmentation tasks verify that our approach performs superior or on par with most contemporary works on an amalgamation of Vision Transformer and CNN-based methods, along with a significant reduction of model complexity. The codes and trained models are publicly available at https://github.com/rezazad68/transdeeplab</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2022">
+          <div class="pub-media">
+            <img src="assets/transnorm.png" alt="TransNorm teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title">TransNorm: Transformer Provides a Strong Spatial Normalization Mechanism for a Deep Segmentation Model</h3>
+            <p class="pub-authors">
+              Reza Azad, Mohammad T. AL-Antary, <strong>Moein Heidari</strong>, Dorit Merhof
+            </p>
+            <p class="pub-venue">IEEE Access, 2022</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="https://doi.org/10.1109/ACCESS.2022.3211501" target="_blank" rel="noopener noreferrer">paper</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>In the past few years, convolutional neural networks (CNNs), particularly U-Net, have been the prevailing technique in the medical image processing era. Specifically, the seminal U-Net, as well as its alternatives, have successfully managed to address a wide variety of medical image segmentation tasks. However, these architectures are intrinsically imperfect as they fail to exhibit long-range interactions and spatial dependencies leading to a severe performance drop in the segmentation of medical images with variable shapes and structures. Transformers, preliminary proposed for sequence-to-sequence prediction, have arisen as surrogate architectures to precisely model global information assisted by the self-attention mechanism. Despite being feasibly designed, utilizing a pure Transformer for image segmentation purposes can result in limited localization capacity stemming from inadequate low-level features. Thus, a line of research strives to design robust variants of Transformer-based U-Net. In this paper, we propose Trans-Norm, a novel deep segmentation framework which concomitantly consolidates a Transformer module into both encoder and skip-connections of the standard U-Net. We argue that the expedient design of skip-connections can be crucial for accurate segmentation as it can assist in feature fusion between the expanding and contracting paths. In this respect, we derive a Spatial Normalization mechanism from the Transformer module to adaptively recalibrate the skip connection path. Extensive experiments across three typical tasks for medical image segmentation demonstrate the effectiveness of TransNorm. The codes and trained models are publicly available at https://github.com/rezazad68/transnorm.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ======= Contact ======= -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>I'm always interested in discussing research ideas, collaborations, and opportunities. Feel free to reach out.</p>
         </div>
-        
-        <div class="about-side">
-          <div class="info-card">
-            <div class="card-header">
-              <i class="fas fa-university"></i>
-              <h3>Education</h3>
-            </div>
-            <div class="education-item">
-              <div class="edu-degree">PhD in Biomedical Engineering</div>
-              <div class="edu-school">University of British Columbia</div>
-              <div class="edu-date">2024 - Present</div>
-            </div>
-            <div class="education-item">
-              <div class="edu-degree">B.Sc. Electrical Engineering</div>
-              <div class="edu-school">Iran University of Science and Technology</div>
-              <div class="edu-date">2017 - 2022</div>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <div class="card-header">
-              <i class="fas fa-award"></i>
-              <h3>Recent Highlights</h3>
-            </div>
-            <ul class="highlights-list">
-              <li>
-                <i class="fas fa-star"></i>
-                <span>3 papers accepted at top-tier conferences (CVPR, ICCV, ICASSP 2025)</span>
-              </li>
-              <li>
-                <i class="fas fa-star"></i>
-                <span>Featured in Medical Image Analysis journal</span>
-              </li>
-              <li>
-                <i class="fas fa-star"></i>
-                <span>Collaborations with Stanford, RWTH, MILA</span>
-              </li>
-              <li>
-                <i class="fas fa-star"></i>
-                <span>20+ publications in top venues</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="cv-download">
-            <a href="./assets/Moein_Heidari_CV.pdf" target="_blank" class="btn btn-download">
-              <i class="fas fa-download"></i>
-              Download CV
-            </a>
-          </div>
+        <div class="contact-email">
+          <h4>Email:</h4>
+          <p><a href="mailto:moein.heidari@ubc.ca">moein.heidari@ubc.ca</a></p>
+          <p><a href="mailto:moeinheidari7829@gmail.com">moeinheidari7829@gmail.com</a></p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- News Section -->
-  <section class="section section-alt" id="news">
+  </main>
+
+  <footer id="footer">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">Latest News</span>
-        <h2 class="section-title">Recent Achievements</h2>
-        <p class="section-desc">
-          Stay updated with my latest research milestones and paper acceptances.
-        </p>
-      </div>
-      
-      <div class="news-timeline">
-        <div class="timeline-item">
-          <div class="timeline-marker success"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Dec. 2024]</span>
-            <p>🎉 Paper <strong>Prompt2Perturb (P2P)</strong> accepted at <strong>CVPR'25</strong>.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker success"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Sep. 2024]</span>
-            <p>🎉 Paper <strong>SL²A-INR</strong> accepted at <strong>ICCV'25</strong>.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker success"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Sep. 2024]</span>
-            <p>🎉 Paper <strong>Fourier KAN</strong> for implicit neural representations accepted at <strong>ICASSP'25</strong>.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker success"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Sep. 2024]</span>
-            <p>🎉 Paper on <strong>U-Net modifications</strong> for tumor segmentation accepted at <strong>SPIE'25</strong>.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker success"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Jul. 2024]</span>
-            <p>🎉 Paper <strong>MSA² Net</strong> on multi-scale attention accepted at <strong>BMVC'24</strong>.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker info"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Jan. 2024]</span>
-            <p>🎓 Started my <strong>Ph.D. in Biomedical Engineering</strong> at the University of British Columbia.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker success"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Aug. 2023]</span>
-            <p>🎉 Paper <strong>SA²-Net</strong> accepted for <strong>oral presentation</strong> at <strong>BMVC'23</strong>.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker success"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Aug. 2023]</span>
-            <p>🎉 Our <strong>survey paper</strong> on Vision Transformers in Medical Imaging accepted in the <strong>Medical Image Analysis Journal</strong>.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker success"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Aug. 2023]</span>
-            <p>🎉 Our <strong>survey paper</strong> on Diffusion Models in Medical Imaging accepted in the <strong>Medical Image Analysis Journal</strong>.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker success"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Sep. 2022]</span>
-            <p>🎉 Paper <strong>HiFormer</strong> on medical image segmentation accepted at <strong>WACV'23</strong>.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker success"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Aug. 2022]</span>
-            <p>🎉 Three papers, <strong>Contextual Attention Network</strong>, <strong>IVD Labeling</strong>, and <strong>TransDeepLab</strong> accepted at <strong>MICCAI'22</strong>.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker success"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Aug. 2022]</span>
-            <p>🎉 Paper <strong>TransNorm</strong> accepted in <strong>IEEE Access</strong> journal.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-marker info"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">[Sep. 2021]</span>
-            <p>🎓 Successfully defended my <strong>bachelor's thesis</strong> on designing, simulating, and building a self-driving car.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Publications Section -->
-  <section class="section" id="publications">
-    <div class="container-wide">
-      <div class="section-header">
-        <span class="section-label">Research Publications</span>
-        <h2 class="section-title">20+ Publications in Top Venues</h2>
-        <p class="section-desc">
-          My research spans Computer Vision, Medical Imaging, and AI Agents, published at premier conferences and journals.
-        </p>
-      </div>
-      
-      <div class="pubs-container">
-        
-        <!-- CVPR 2025 -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/prompt-to-purterb.png" alt="Prompt2Perturb teaser">
-          </div>
-          <div class="pub-content">
-            <h3>Prompt2Perturb (P2P): Text-Guided Diffusion-Based Adversarial Attacks on Breast Ultrasound Images</h3>
-            <p class="pub-authors">Yasamin Medghalchi, <strong>Moein Heidari</strong>, Clayton Allard, Leonid Sigal, Ilker Hacihaliloglu</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>CVPR 2025</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- ICCV 2025 -->
-        <article class="pub featured">
-          <div class="pub-img">
-            <img src="./assets/SL2A-teaser.png" alt="SL²A-INR teaser">
-          </div>
-          <div class="pub-content">
-            <h3>SL²A-INR: Single-Layer Learnable Activation for Implicit Neural Representation</h3>
-            <p class="pub-authors"><strong>Moein Heidari*</strong>, Reza Rezaeian*, Reza Azad, Dorit Merhof, Hamid Soltanian-Zadeh, Ilker Hacihaliloglu</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>ICCV 2025</strong></p>
-            <div class="pub-links">
-              <a href="https://moeinheidari7829.github.io/SL2A-INR/"><i class="fas fa-globe"></i> Project Page</a>
-              <a href="https://arxiv.org/abs/2409.10836"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="https://github.com/Iceage7/SL2A-INR"><i class="fab fa-github"></i> GitHub</a>
-              <a href="https://www.youtube.com/watch?v=5dlaTW0P8YY"><i class="fab fa-youtube"></i> Video</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- ICASSP 2025 -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/fourier-kan.png" alt="Fourier KAN teaser">
-          </div>
-          <div class="pub-content">
-            <h3>Implicit Neural Representations with Fourier Kolmogorov-Arnold Networks</h3>
-            <p class="pub-authors">Ali Mehrabian, Parsa Mojarad Adi, <strong>Moein Heidari</strong>, Ilker Hacihaliloglu</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>ICASSP 2025</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- SPIE 2025 -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/SPIE.png" alt="SPIE teaser">
-          </div>
-          <div class="pub-content">
-            <h3>A Study on the Performance of U-Net Modifications in Retroperitoneal Tumor Segmentation</h3>
-            <p class="pub-authors"><strong>Moein Heidari</strong>, Ehsan Khodapanah Aghdam, Alexander Manzella, Daniel Hsu, Rebecca Scalabrino, Wenjin Chen, David J Foran, Ilker Hacihaliloglu</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>SPIE 2025</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- MICCAI 2025 Submission -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/echo-e3net.png" alt="Echo-E³ Net teaser">
-          </div>
-          <div class="pub-content">
-            <h3>Echo-E³ Net: Efficient Endo-Epi Spatio-Temporal Network for Ejection Fraction Estimation</h3>
-            <p class="pub-authors"><strong>Moein Heidari</strong>, Afshin Bozorgpour, AmirHossein Zarif-Fakharnia, Dorit Merhof, Ilker Hacihaliloglu</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>MICCAI 2025</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- MSA²-Net -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/MSA2Net-1.png" alt="MSA²-Net teaser">
-          </div>
-          <div class="pub-content">
-            <h3>MSA² Net: Multi-scale Adaptive Attention-guided Network for Medical Image Segmentation</h3>
-            <p class="pub-authors">Sina Ghorbani Kolahi, Seyed Kamal Chaharsooghi, Toktam Khatibi, Afshin Bozorgpour, Reza Azad, <strong>Moein Heidari</strong>, Ilker Hacihaliloglu, Dorit Merhof</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>BMVC 2024</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- State Space Models Survey -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/mamba-survey.png" alt="State Space Models Survey teaser">
-          </div>
-          <div class="pub-content">
-            <h3>Computation-Efficient Era: A Comprehensive Survey of State Space Models in Medical Image Analysis</h3>
-            <p class="pub-authors"><strong>Moein Heidari</strong>, Sina Ghorbani Kolahi, Sanaz Karimijafarbigloo, Bobby Azad, Afshin Bozorgpour, Soheila Hatami, Reza Azad, Ali Diba, Ulas Bagci, Dorit Merhof</p>
-            <p class="pub-venue"><strong>Journal:</strong> <strong>Medical Image Analysis (MedIA)</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Vision Transformer Efficiency -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/efficiency-survey.png" alt="Vision Transformer Efficiency teaser">
-          </div>
-          <div class="pub-content">
-            <h3>Enhancing Efficiency in Vision Transformer Networks: Design Techniques and Insights</h3>
-            <p class="pub-authors"><strong>Moein Heidari</strong>, Reza Azad, Sina Ghorbani Kolahi, René Arimond, Leon Niggemeier, Alaa Sulaiman, Afshin Bozorgpour, Ehsan Khodapanah Aghdam, Amirhossein Kazerouni, Ilker Hacihaliloglu, Dorit Merhof</p>
-            <p class="pub-venue"><strong>Journal:</strong> <strong>arXiv preprint</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Vision-Language US -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/VLUS.png" alt="Vision-Language Ultrasound teaser">
-          </div>
-          <div class="pub-content">
-            <h3>Vision-Language Synthetic Data Enhances Echocardiography Downstream Tasks</h3>
-            <p class="pub-authors">Pooria Ashrafian, Milad Yazdani, <strong>Moein Heidari</strong>, Dena Shahriari, Ilker Hacihaliloglu</p>
-            <p class="pub-venue"><strong>Journal:</strong> <strong>arXiv preprint</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- SA²-Net -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/SA²-Net.png" alt="SA²-Net teaser">
-          </div>
-          <div class="pub-content">
-            <h3>SA²-Net: Scale-aware Attention Network for Cell Segmentation and Beyond</h3>
-            <p class="pub-authors">Mustansar Fiaz, <strong>Moein Heidari</strong>, Rao Muhammad Anwer, Hisham Cholakkal</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>BMVC 2023 | Oral presentation</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- HiFormer -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/hiformer_teaser.png" alt="HiFormer teaser">
-          </div>
-          <div class="pub-content">
-            <h3>HiFormer: Hierarchical Multi-scale Representations Using Transformers for Medical Image Segmentation</h3>
-            <p class="pub-authors">Moein Heidari*, <strong>Moein Heidari*</strong>, Milad Soltany*, Reza Azad, Ehsan Khodapanah Aghdam, Julien Cohen-Adad, Dorit Merhof</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>IEEE/CVF WACV 2023</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Diffusion Models Survey -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/diffusion_survey_teaser.png" alt="Diffusion Survey teaser">
-          </div>
-          <div class="pub-content">
-            <h3>Diffusion Models in Medical Imaging: A Comprehensive Survey</h3>
-            <p class="pub-authors">Amirhossein Kazerouni, Ehsan Khodapanah Aghdam, <strong>Moein Heidari</strong>, Reza Azad, Mohsen Fayyaz, Ilker Hacihaliloglu, Dorit Merhof</p>
-            <p class="pub-venue"><strong>Journal:</strong> <strong>Medical Image Analysis (MedIA)</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Vision Transformers Survey -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/vit_survey_teaser.png" alt="Vision Transformers Survey teaser">
-          </div>
-          <div class="pub-content">
-            <h3>Advances in Medical Image Analysis with Vision Transformers: A Comprehensive Review</h3>
-            <p class="pub-authors">Reza Azad, <strong>Moein Heidari</strong>, Moein Shariatnia, Ehsan Khodapanah Aghdam, Amirali Molaei, Yiwei Jia, Abin Jose, Rijo Roy, Dorit Merhof</p>
-            <p class="pub-venue"><strong>Journal:</strong> <strong>Medical Image Analysis (MedIA)</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- ICLR TinyPapers - DiffGANPaint -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/DiffGANPaint.png" alt="DiffGANPaint teaser">
-          </div>
-          <div class="pub-content">
-            <h3>DiffGANPaint: Fast Inpainting Using Denoising Diffusion GANs</h3>
-            <p class="pub-authors"><strong>Moein Heidari</strong>, Alireza Morsali, Samin Heydarian, Tohid Abedini</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>ICLR 2023 TinyPapers</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- ICLR TinyPapers - MLP Attention -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/MLP-Attention.png" alt="MLP-Attention teaser">
-          </div>
-          <div class="pub-content">
-            <h3>MLP-Attention: Improving Transformer Architecture with MLP Attention Weights</h3>
-            <p class="pub-authors">Alireza Morsali, <strong>Moein Heidari</strong>, Samin Heydarian, Tohid Abedini</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>ICLR 2023 TinyPapers</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Contextual Attention Network -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/contexual.png" alt="Contextual Attention Network teaser">
-          </div>
-          <div class="pub-content">
-            <h3>Contextual Attention Network: Transformer Meets U-Net</h3>
-            <p class="pub-authors">Reza Azad, <strong>Moein Heidari</strong>, Yuli Wu, Dorit Merhof</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>MICCAI 2022</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- IVD Labeling -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/intervertebral.png" alt="IVD Labeling teaser">
-          </div>
-          <div class="pub-content">
-            <h3>Intervertebral Disc Labeling With Learning Shape Information, A Look Once Approach</h3>
-            <p class="pub-authors">Reza Azad, <strong>Moein Heidari</strong>, Julien Cohen-Adad, Ehsan Adeli, Dorit Merhof</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>MICCAI 2022</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- TransDeepLab -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/proposed_deeplab_model-1.png" alt="TransDeepLab teaser">
-          </div>
-          <div class="pub-content">
-            <h3>TransDeepLab: Convolution-Free Transformer-based DeepLab v3+ for Medical Image Segmentation</h3>
-            <p class="pub-authors">Reza Azad, <strong>Moein Heidari</strong>, Moein Shariatnia, Ehsan Khodapanah Aghdam, Sanaz Karimijafarbigloo, Ehsan Adeli, Dorit Merhof</p>
-            <p class="pub-venue"><strong>Conference:</strong> <strong>MICCAI 2022</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- TransNorm -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/transnorm.png" alt="TransNorm teaser">
-          </div>
-          <div class="pub-content">
-            <h3>TransNorm: Transformer Provides a Strong Spatial Normalization Mechanism for a Deep Segmentation Model</h3>
-            <p class="pub-authors">Reza Azad, Mohammad T. AL-Antary, <strong>Moein Heidari</strong>, Dorit Merhof</p>
-            <p class="pub-venue"><strong>Journal:</strong> <strong>IEEE Access</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Loss Functions Survey -->
-        <article class="pub">
-          <div class="pub-img">
-            <img src="./assets/Loss paper.png" alt="Loss Functions Survey teaser">
-          </div>
-          <div class="pub-content">
-            <h3>Loss Functions in the Era of Semantic Segmentation: A Survey and Outlook</h3>
-            <p class="pub-authors">Reza Azad, <strong>Moein Heidari</strong>, Kadir Yilmaz, Michael Hüttemann, Sanaz Karimijafarbigloo, Yuli Wu, Anke Schmeink, Dorit Merhof</p>
-            <p class="pub-venue"><strong>Journal:</strong> <strong>arXiv preprint</strong></p>
-            <div class="pub-links">
-              <a href="#"><i class="fas fa-file-pdf"></i> Paper</a>
-              <a href="#"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section class="section section-alt" id="experience">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Experience & Service</span>
-        <h2 class="section-title">Research, Teaching & Reviewing</h2>
-        <p class="section-desc">
-          My professional journey spans research, teaching, and service to the academic community.
-        </p>
-      </div>
-      
-      <div class="experience-tabs">
-        <div class="tab-buttons">
-          <button class="tab-btn active" data-tab="research">Research</button>
-          <button class="tab-btn" data-tab="teaching">Teaching</button>
-          <button class="tab-btn" data-tab="service">Service</button>
-          <button class="tab-btn" data-tab="reviewing">Reviewing</button>
-        </div>
-        
-        <div class="tab-content">
-          <div class="tab-panel active" id="research">
-            <div class="experience-grid">
-              <div class="exp-card">
-                <div class="exp-icon">
-                  <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="exp-content">
-                  <h3>PhD Student</h3>
-                  <div class="exp-org">University of British Columbia</div>
-                  <div class="exp-date">Jan. 2024 - Present</div>
-                  <p>Researching agentic frameworks for echocardiography and implicit neural representations in medical imaging.</p>
-                </div>
-              </div>
-              
-              <div class="exp-card">
-                <div class="exp-icon">
-                  <i class="fas fa-flask"></i>
-                </div>
-                <div class="exp-content">
-                  <h3>Research Assistant</h3>
-                  <div class="exp-org">RWTH University, Aachen</div>
-                  <div class="exp-date">Mar. 2022 - Dec. 2023</div>
-                  <p>Collaborated on medical image analysis projects, focusing on vision transformers and deep learning architectures.</p>
-                </div>
-              </div>
-              
-              <div class="exp-card">
-                <div class="exp-icon">
-                  <i class="fas fa-university"></i>
-                </div>
-                <div class="exp-content">
-                  <h3>Research Assistant</h3>
-                  <div class="exp-org">MBZUAI, UAE</div>
-                  <div class="exp-date">Jan. 2023 - May 2023</div>
-                  <p>Worked on advanced computer vision projects and collaborated with international research teams.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="tab-panel" id="teaching">
-            <div class="experience-grid">
-              <div class="exp-card">
-                <div class="exp-icon">
-                  <i class="fas fa-chalkboard-teacher"></i>
-                </div>
-                <div class="exp-content">
-                  <h3>Teaching Assistant</h3>
-                  <div class="exp-org">University of British Columbia</div>
-                  <div class="exp-date">2024 - Present</div>
-                  <p>Assisting in biomedical engineering courses, helping students with computer vision and machine learning concepts.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="tab-panel" id="service">
-            <div class="experience-grid">
-              <div class="exp-card">
-                <div class="exp-icon">
-                  <i class="fas fa-users"></i>
-                </div>
-                <div class="exp-content">
-                  <h3>Student Representative</h3>
-                  <div class="exp-org">UBC Biomedical Engineering</div>
-                  <div class="exp-date">2024 - Present</div>
-                  <p>Representing graduate students in departmental meetings and organizing academic events.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="tab-panel" id="reviewing">
-            <div class="experience-grid">
-              <div class="exp-card">
-                <div class="exp-icon">
-                  <i class="fas fa-clipboard-check"></i>
-                </div>
-                <div class="exp-content">
-                  <h3>Conference Reviewer</h3>
-                  <div class="exp-org">CVPR, ICCV, MICCAI, WACV, BMVC</div>
-                  <div class="exp-date">2022 - Present</div>
-                  <p>Reviewing papers for top-tier computer vision and medical imaging conferences.</p>
-                </div>
-              </div>
-              
-              <div class="exp-card">
-                <div class="exp-icon">
-                  <i class="fas fa-journal-whills"></i>
-                </div>
-                <div class="exp-content">
-                  <h3>Journal Reviewer</h3>
-                  <div class="exp-org">Medical Image Analysis, IEEE TMI</div>
-                  <div class="exp-date">2023 - Present</div>
-                  <p>Reviewing manuscripts for prestigious medical imaging journals.</p>
-                </div>
-              </div>
-              
-              <div class="exp-card">
-                <div class="exp-icon">
-                  <i class="fas fa-award"></i>
-                </div>
-                <div class="exp-content">
-                  <h3>Outstanding Reviewer</h3>
-                  <div class="exp-org">BMVC 2023</div>
-                  <div class="exp-date">2023</div>
-                  <p>Recognized for exceptional review quality and constructive feedback.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Get In Touch</span>
-        <h2 class="section-title">Let's Collaborate</h2>
-        <p class="section-desc">
-          I'm always interested in discussing research ideas, collaborations, and opportunities.
-        </p>
-      </div>
-      
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Email</h3>
-              <p><a href="mailto:moein.heidari@ubc.ca">moein.heidari@ubc.ca</a></p>
-              <p><a href="mailto:moeinheidari7829@gmail.com">moeinheidari7829@gmail.com</a></p>
-            </div>
-          </div>
-          
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Location</h3>
-              <p>Vancouver, BC, Canada</p>
-              <p>University of British Columbia</p>
-            </div>
-          </div>
-          
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-            <div class="contact-details">
-              <h3>Availability</h3>
-              <p>Open to collaborations</p>
-              <p>Available for research discussions</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="social-section">
-          <h3>Connect With Me</h3>
-          <div class="social-links">
-            <a href="https://scholar.google.com/citations?user=mir8D5UAAAAJ&hl=en" target="_blank" title="Google Scholar">
-              <i class="fas fa-graduation-cap"></i>
-              <span>Google Scholar</span>
-            </a>
-            <a href="https://github.com/moeinheidari7829" target="_blank" title="GitHub">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="https://www.linkedin.com/in/moein-heidari/" target="_blank" title="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://twitter.com/moeinheidari" target="_blank" title="Twitter">
-              <i class="fab fa-twitter"></i>
-              <span>Twitter</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <p>&copy; 2025 Moein Heidari. All rights reserved.</p>
-        <p>Built with passion for research and innovation.</p>
-      </div>
+      <p>&copy; 2026 Moein Heidari.</p>
     </div>
   </footer>
 
-  <!-- Back to Top Button -->
-  <button class="back-to-top" id="backToTop">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+    <figure>
+      <img src="" alt="">
+      <figcaption></figcaption>
+    </figure>
+  </div>
 
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

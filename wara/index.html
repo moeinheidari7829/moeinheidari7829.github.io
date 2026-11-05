@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WaRA</title>
+  <meta name="description" content="WaRA: Wavelet Low-Rank Adaptation for Medical Image Classification">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css">
+  <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+
+<nav class="project-nav">
+  <a href="../#publications"><i class="fas fa-arrow-left" aria-hidden="true"></i> Moein Heidari</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">WaRA: Wavelet Low-Rank Adaptation for Medical Image Classification</h1>
+          <p class="is-size-4 has-text-weight-semibold mt-2 mb-4 publication-venue-line">✨ MICCAI 2026 MIRASOL Workshop ✨</p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="../">Moein Heidari</a>,</span>
+            <span class="author-block">Yijin Huang,</span>
+            <span class="author-block">Yasamin Medghalchi,</span>
+            <span class="author-block">Alireza Rafiei,</span>
+            <span class="author-block">Roger Tam,</span>
+            <span class="author-block">Ilker Hacihaliloglu</span>
+          </div>
+          <div class="publication-links">
+            <a class="button" href="https://arxiv.org/abs/2506.24092" target="_blank" rel="noopener noreferrer">
+              <i class="ai ai-arxiv" aria-hidden="true"></i><span>arXiv</span>
+            </a>
+            <a class="button" href="https://github.com/moeinheidari7829/WaRA" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github" aria-hidden="true"></i><span>Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="../assets/wara.png" alt="WaRA overview figure" class="teaser-img">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Adapting large pretrained vision models to medical image classification is often limited by memory, computation, and task-specific specializations. Parameter-efficient fine-tuning (PEFT) methods like LoRA reduce this cost by learning low-rank updates, but operating directly in feature space can struggle to capture the localized, multi-scale features common in medical imaging. We propose WaRA, a wavelet-structured adaptation module that performs low-rank adaptation in a wavelet domain. WaRA reshapes patch tokens into a spatial grid, applies a fixed discrete wavelet transform, updates subband coefficients using a shared low-rank adapter, and reconstructs the additive update through an inverse wavelet transform. This design provides a compact trainable interface while biasing the update toward both coarse structure and fine detail. For extremely low-resource settings, we introduce Tiny-WaRA, which further reduces trainable parameters by learning only a small set of coefficients in a fixed basis derived from the pretrained weights through a truncated SVD. Experiments on medical image classification across four modalities and datasets demonstrate that WaRA consistently improves performance over strong PEFT baselines, while retaining a favorable efficiency profile. Our code is publicly available at https://github.com/moeinheidari7829/WaRA.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-head">
+      <h2 class="title">BibTeX</h2>
+      <button type="button" class="copy-bibtex" aria-label="Copy BibTeX"><i class="far fa-copy" aria-hidden="true"></i> <span>Copy</span></button>
+    </div>
+    <pre><code>@article{heidari2025wara,
+  title   = {WaRA: Wavelet Low-Rank Adaptation for Medical Image Classification},
+  author  = {Heidari, Moein and Huang, Yijin and Medghalchi, Yasamin and Rafiei, Alireza and Tam, Roger and Hacihaliloglu, Ilker},
+  journal = {arXiv preprint arXiv:2506.24092},
+  year    = {2025}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <a href="../">Moein Heidari</a> · This website is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+      <p>Page template adapted from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.copy-bibtex').addEventListener('click', function () {
+    var btn = this, label = btn.querySelector('span');
+    navigator.clipboard.writeText(document.querySelector('#BibTeX code').textContent).then(function () {
+      label.textContent = 'Copied';
+      setTimeout(function () { label.textContent = 'Copy'; }, 1500);
+    });
+  });
+</script>
+</body>
+</html>

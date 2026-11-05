@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echo-CoPilot</title>
+  <meta name="description" content="Echo-CoPilot: A Multiple-Perspective Agentic Framework for Reliable Echocardiography Interpretation">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css">
+  <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+
+<nav class="project-nav">
+  <a href="../#publications"><i class="fas fa-arrow-left" aria-hidden="true"></i> Moein Heidari</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Echo-CoPilot: A Multiple-Perspective Agentic Framework for Reliable Echocardiography Interpretation</h1>
+          <p class="is-size-4 has-text-weight-semibold mt-2 mb-4 publication-venue-line">✨ MICCAI 2026 Agentic AI for Medicine Workshop ✨</p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="../">Moein Heidari</a>,</span>
+            <span class="author-block">Ali Mehrabian,</span>
+            <span class="author-block">Mohammad Amin Roohi,</span>
+            <span class="author-block">River Jiang,</span>
+            <span class="author-block">Wenjin Chen,</span>
+            <span class="author-block">David J. Foran,</span>
+            <span class="author-block">Jasmine Grewal,</span>
+            <span class="author-block">Ilker Hacihaliloglu</span>
+          </div>
+          <div class="publication-links">
+            <a class="button" href="https://arxiv.org/abs/2512.09944" target="_blank" rel="noopener noreferrer">
+              <i class="ai ai-arxiv" aria-hidden="true"></i><span>arXiv</span>
+            </a>
+            <a class="button" href="https://github.com/moeinheidari7829/Echo-CoPilot" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github" aria-hidden="true"></i><span>Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="../assets/echo-copilot.png" alt="Echo-CoPilot overview figure" class="teaser-img">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Echocardiography interpretation requires integrating multi-view temporal evidence with quantitative measurements and guideline-grounded reasoning, yet existing foundation-model pipelines largely solve isolated subtasks and fail when tool outputs are noisy or values fall near clinical cutoffs. We propose Echo-CoPilot, an end-to-end agentic framework that combines a multi-perspective workflow with knowledge-graph-guided measurement selection. Echo-CoPilot runs three independent ReAct-style agents, structural, pathological, and quantitative, that invoke specialized echocardiography tools to extract parameters while querying EchoKG to determine which measurements are required for the clinical question and which should be avoided. A self-contrast language model then compares the evidence-grounded perspectives, generates a discrepancy checklist, and re-queries EchoKG to apply the appropriate guideline thresholds and resolve conflicts, reducing hallucinated measurement selection and borderline flip-flops. On MIMICEchoQA, Echo-CoPilot provides higher accuracy compared to SOTA baselines and, under a stochasticity stress test, achieves higher reliability through more consistent conclusions and fewer answer changes across repeated runs. Our code is publicly available at https://github.com/moeinheidari7829/Echo-CoPilot.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-head">
+      <h2 class="title">BibTeX</h2>
+      <button type="button" class="copy-bibtex" aria-label="Copy BibTeX"><i class="far fa-copy" aria-hidden="true"></i> <span>Copy</span></button>
+    </div>
+    <pre><code>@article{heidari2025echocopilot,
+  title   = {Echo-CoPilot: A Multiple-Perspective Agentic Framework for Reliable Echocardiography Interpretation},
+  author  = {Heidari, Moein and Mehrabian, Ali and Roohi, Mohammad Amin and Jiang, River and Chen, Wenjin and Foran, David J. and Grewal, Jasmine and Hacihaliloglu, Ilker},
+  journal = {arXiv preprint arXiv:2512.09944},
+  year    = {2025}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <a href="../">Moein Heidari</a> · This website is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+      <p>Page template adapted from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.copy-bibtex').addEventListener('click', function () {
+    var btn = this, label = btn.querySelector('span');
+    navigator.clipboard.writeText(document.querySelector('#BibTeX code').textContent).then(function () {
+      label.textContent = 'Copied';
+      setTimeout(function () { label.textContent = 'Copy'; }, 1500);
+    });
+  });
+</script>
+</body>
+</html>

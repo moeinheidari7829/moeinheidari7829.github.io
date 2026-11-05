@@ -1,362 +1,127 @@
-// ===== ULTRA-FANCY ACADEMIC PORTFOLIO JAVASCRIPT =====
+(function () {
+  "use strict";
 
-// ===== Custom Cursor =====
-const cursor = document.querySelector('.cursor');
-const cursorFollower = document.querySelector('.cursor-follower');
+  const $ = (sel, root = document) => root.querySelector(sel);
+  const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
-if (window.innerWidth > 768) {
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    
-    setTimeout(() => {
-      cursorFollower.style.left = e.clientX + 'px';
-      cursorFollower.style.top = e.clientY + 'px';
-    }, 100);
-  });
-
-  // Cursor hover effects
-  const hoverElements = document.querySelectorAll('a, button, .pub, .stat, .research-tag');
-  hoverElements.forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.classList.add('hover');
+  /* ---------- Active nav link on scroll ---------- */
+  const navLinks = $$(".nav-links .nav-link");
+  const updateActiveNav = () => {
+    const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
+    const position = window.scrollY + 120;
+    let current = null;
+    navLinks.forEach((link) => {
+      const section = $(link.hash);
+      if (section && position >= section.offsetTop) current = link;
     });
-    el.addEventListener('mouseleave', () => {
-      cursor.classList.remove('hover');
-    });
-  });
-}
-
-// ===== Mobile Navigation =====
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
-
-if (navToggle) {
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    navToggle.classList.toggle('active');
-  });
-
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
-      navToggle.classList.remove('active');
-    });
-  });
-}
-
-// ===== Navbar Scroll Effect =====
-const nav = document.querySelector('.nav');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
-});
-
-// ===== Typing Effect =====
-const typedElement = document.getElementById('typed');
-if (typedElement) {
-  const phrases = [
-    'Computer Vision Researcher',
-    'PhD Student at UBC',
-    'Deep Learning Engineer',
-    'Medical Imaging Specialist',
-    'AI Agent Developer'
-  ];
-  
-  let phraseIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let typingSpeed = 100;
-
-  function type() {
-    const currentPhrase = phrases[phraseIndex];
-    
-    if (isDeleting) {
-      typedElement.textContent = currentPhrase.substring(0, charIndex - 1);
-      charIndex--;
-      typingSpeed = 50;
-    } else {
-      typedElement.textContent = currentPhrase.substring(0, charIndex + 1);
-      charIndex++;
-      typingSpeed = 100;
-    }
-
-    if (!isDeleting && charIndex === currentPhrase.length) {
-      isDeleting = true;
-      typingSpeed = 2000;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      phraseIndex = (phraseIndex + 1) % phrases.length;
-      typingSpeed = 500;
-    }
-
-    setTimeout(type, typingSpeed);
-  }
-
-  type();
-}
-
-// ===== Animated Counter =====
-function animateCounter(element, target, duration = 2000) {
-  let start = 0;
-  const increment = target / (duration / 16);
-  
-  function updateCounter() {
-    start += increment;
-    if (start < target) {
-      element.textContent = Math.floor(start) + '+';
-      requestAnimationFrame(updateCounter);
-    } else {
-      element.textContent = target + '+';
-    }
-  }
-  
-  updateCounter();
-}
-
-// ===== Smooth Scroll =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      const navHeight = nav.offsetHeight;
-      const targetPosition = target.offsetTop - navHeight - 20;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-  });
-});
-
-// ===== Scroll Reveal Animation =====
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      
-      // Animate counter when stats section is visible
-      if (entry.target.classList.contains('stat-num') && entry.target.dataset.target) {
-        animateCounter(entry.target, parseInt(entry.target.dataset.target));
-      }
-    }
-  });
-}, observerOptions);
-
-// Observe elements for scroll reveal
-document.querySelectorAll('.pub, .fade-in, .timeline-item, .stat-num').forEach(el => {
-  observer.observe(el);
-});
-
-// ===== Experience Tabs =====
-const tabButtons = document.querySelectorAll('.tab-btn');
-const tabPanels = document.querySelectorAll('.tab-panel');
-
-tabButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const targetTab = button.dataset.tab;
-    
-    // Remove active class from all buttons and panels
-    tabButtons.forEach(btn => btn.classList.remove('active'));
-    tabPanels.forEach(panel => panel.classList.remove('active'));
-    
-    // Add active class to clicked button and corresponding panel
-    button.classList.add('active');
-    document.getElementById(targetTab).classList.add('active');
-  });
-});
-
-// ===== Back to Top Button =====
-const backToTopButton = document.getElementById('backToTop');
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopButton.classList.add('visible');
-  } else {
-    backToTopButton.classList.remove('visible');
-  }
-});
-
-backToTopButton.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
-
-// ===== Parallax Effect for Floating Blobs =====
-window.addEventListener('scroll', () => {
-  const scrolled = window.pageYOffset;
-  const blobs = document.querySelectorAll('.floating-blob');
-  
-  blobs.forEach((blob, index) => {
-    const speed = 0.5 + (index * 0.1);
-    const yPos = -(scrolled * speed);
-    blob.style.transform = `translateY(${yPos}px)`;
-  });
-});
-
-// ===== Publication Filter (if needed in future) =====
-function filterPublications(filter) {
-  const publications = document.querySelectorAll('.pub');
-  
-  publications.forEach(pub => {
-    if (filter === 'all' || pub.dataset.category === filter) {
-      pub.style.display = 'grid';
-    } else {
-      pub.style.display = 'none';
-    }
-  });
-}
-
-// ===== Smooth Page Load =====
-window.addEventListener('load', () => {
-  document.body.style.opacity = '0';
-  setTimeout(() => {
-    document.body.style.transition = 'opacity 0.5s ease';
-    document.body.style.opacity = '1';
-  }, 100);
-});
-
-// ===== Research Tags Interaction =====
-const researchTags = document.querySelectorAll('.research-tag');
-researchTags.forEach(tag => {
-  tag.addEventListener('click', () => {
-    // Add a subtle animation when clicked
-    tag.style.transform = 'scale(0.95)';
-    setTimeout(() => {
-      tag.style.transform = 'scale(1)';
-    }, 150);
-  });
-});
-
-// ===== Publication Hover Effects =====
-const publications = document.querySelectorAll('.pub');
-publications.forEach(pub => {
-  pub.addEventListener('mouseenter', () => {
-    pub.style.transform = 'translateX(10px)';
-  });
-  
-  pub.addEventListener('mouseleave', () => {
-    pub.style.transform = 'translateX(0)';
-  });
-});
-
-// ===== Social Links Animation =====
-const socialLinks = document.querySelectorAll('.social-links a');
-socialLinks.forEach(link => {
-  link.addEventListener('mouseenter', () => {
-    link.style.transform = 'translateX(10px) scale(1.05)';
-  });
-  
-  link.addEventListener('mouseleave', () => {
-    link.style.transform = 'translateX(0) scale(1)';
-  });
-});
-
-// ===== Timeline Animation =====
-const timelineItems = document.querySelectorAll('.timeline-item');
-const timelineObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, index) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateX(0)';
-      }, index * 100);
-    }
-  });
-}, { threshold: 0.1 });
-
-timelineItems.forEach(item => {
-  timelineObserver.observe(item);
-});
-
-// ===== Stats Counter Animation =====
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const target = parseInt(entry.target.dataset.target);
-      if (target) {
-        animateCounter(entry.target, target);
-      }
-    }
-  });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('.stat-num[data-target]').forEach(stat => {
-  statsObserver.observe(stat);
-});
-
-// ===== Enhanced Scroll Effects =====
-let ticking = false;
-
-function updateScrollEffects() {
-  const scrolled = window.pageYOffset;
-  const rate = scrolled * -0.5;
-  
-  // Parallax for hero background
-  const heroBg = document.querySelector('.hero-bg');
-  if (heroBg) {
-    heroBg.style.transform = `translateY(${rate}px)`;
-  }
-  
-  ticking = false;
-}
-
-window.addEventListener('scroll', () => {
-  if (!ticking) {
-    requestAnimationFrame(updateScrollEffects);
-    ticking = true;
-  }
-});
-
-// ===== Keyboard Navigation =====
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    // Close mobile menu if open
-    if (navMenu.classList.contains('active')) {
-      navMenu.classList.remove('active');
-      navToggle.classList.remove('active');
-    }
-  }
-});
-
-// ===== Performance Optimization =====
-// Debounce scroll events
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
+    if (nearBottom) current = navLinks[navLinks.length - 1];
+    navLinks.forEach((link) => link.classList.toggle("active", link === current));
   };
-}
+  document.addEventListener("scroll", updateActiveNav, { passive: true });
+  updateActiveNav();
 
-// Apply debouncing to scroll events
-const debouncedScrollHandler = debounce(() => {
-  // Scroll-based animations here
-}, 10);
+  /* ---------- News: show the most recent items, toggle the rest ---------- */
+  const RECENT_NEWS = 6;
+  const newsItems = $$("#news .news-list > li");
+  const newsToggle = $(".news-toggle");
+  const setNewsExpanded = (expanded) => {
+    newsItems.forEach((item, i) => item.classList.toggle("news-hidden", !expanded && i >= RECENT_NEWS));
+    if (!newsToggle) return;
+    newsToggle.textContent = expanded ? "show recent news only" : "show older news";
+    newsToggle.setAttribute("aria-expanded", String(expanded));
+  };
+  if (newsToggle && newsItems.length > RECENT_NEWS) {
+    newsToggle.addEventListener("click", () =>
+      setNewsExpanded(newsToggle.getAttribute("aria-expanded") !== "true"));
+    setNewsExpanded(false);
+  } else if (newsToggle) {
+    newsToggle.hidden = true;
+  }
 
-window.addEventListener('scroll', debouncedScrollHandler);
+  /* ---------- Publications: year filter ---------- */
+  const cards = $$("#publications .post");
+  const status = $(".publication-status");
+  const filters = $$(".pub-filter");
+  const applyFilter = (year) => {
+    let shown = 0;
+    cards.forEach((card) => {
+      const visible = year === "all" || card.dataset.year === year;
+      card.classList.toggle("is-hidden", !visible);
+      if (visible) shown += 1;
+    });
+    if (status) {
+      status.textContent = year === "all"
+        ? `Showing all ${shown} publications.`
+        : `Showing ${shown} publication${shown === 1 ? "" : "s"} from ${year}.`;
+    }
+  };
+  filters.forEach((button) => {
+    button.addEventListener("click", () => {
+      filters.forEach((b) => {
+        b.classList.toggle("is-active", b === button);
+        b.setAttribute("aria-pressed", String(b === button));
+      });
+      applyFilter(button.dataset.filter || "all");
+    });
+  });
 
-// ===== Initialize Everything =====
-document.addEventListener('DOMContentLoaded', () => {
-  // Add loading animation
-  document.body.classList.add('loaded');
-  
-  // Initialize any other components
-  console.log('🚀 Ultra-Fancy Academic Portfolio Loaded!');
-});
+  /* ---------- Abstract toggles: accessible labels ---------- */
+  cards.forEach((card) => {
+    const details = $(".pub-abstract", card);
+    const summary = details && $(".pub-abstract-toggle", details);
+    if (!summary) return;
+    const title = ($(".pub-title", card)?.textContent || "publication").replace(/\s+/g, " ").trim();
+    const label = () => summary.setAttribute("aria-label", `${details.open ? "Hide" : "Show"} abstract for ${title}`);
+    details.addEventListener("toggle", label);
+    label();
+  });
+
+  /* ---------- Teaser lightbox ---------- */
+  const box = $("#lightbox");
+  const boxImg = box && $("img", box);
+  const boxCap = box && $("figcaption", box);
+  let lastTrigger = null;
+  const closeBox = () => {
+    if (!box || box.hidden) return;
+    box.hidden = true;
+    document.body.style.overflow = "";
+    if (lastTrigger) lastTrigger.focus();
+  };
+  $$(".pub-media").forEach((media) => {
+    const img = $("img", media);
+    if (!img || !box) return;
+    const title = ($(".pub-title", media.parentElement)?.textContent || img.alt).replace(/\s+/g, " ").trim();
+    const trigger = document.createElement("button");
+    trigger.type = "button";
+    trigger.className = "pub-media-link";
+    trigger.setAttribute("aria-label", `Open full teaser for ${title}`);
+    trigger.innerHTML = '<span class="pub-media-link-label"><span>view teaser</span><i class="fas fa-expand-alt" aria-hidden="true"></i></span>';
+    trigger.addEventListener("click", () => {
+      lastTrigger = trigger;
+      boxImg.src = img.currentSrc || img.src;
+      boxImg.alt = img.alt;
+      boxCap.textContent = title;
+      box.hidden = false;
+      document.body.style.overflow = "hidden";
+      $(".lightbox-close", box).focus();
+    });
+    media.appendChild(trigger);
+  });
+  $$(".news-figure").forEach((btn) => {
+    const img = $("img", btn);
+    if (!img || !box) return;
+    btn.addEventListener("click", () => {
+      lastTrigger = btn;
+      boxImg.src = btn.dataset.full || img.src;
+      boxImg.alt = img.alt;
+      boxCap.textContent = img.alt;
+      box.hidden = false;
+      document.body.style.overflow = "hidden";
+      $(".lightbox-close", box).focus();
+    });
+  });
+  if (box) {
+    box.addEventListener("click", (e) => { if (e.target !== boxImg) closeBox(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeBox(); });
+  }
+})();

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Echo-E³Net</title>
+  <meta name="description" content="Echo-E³Net: Efficient Endocardial Spatio-Temporal Network for Ejection Fraction Estimation">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css">
+  <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+
+<nav class="project-nav">
+  <a href="../#publications"><i class="fas fa-arrow-left" aria-hidden="true"></i> Moein Heidari</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Echo-E³Net: Efficient Endocardial Spatio-Temporal Network for Ejection Fraction Estimation</h1>
+          <p class="is-size-4 has-text-weight-semibold mt-2 mb-4 publication-venue-line">✨ MICCAI 2026 ASMUS Workshop ✨</p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="../">Moein Heidari</a><sup>*</sup>,</span>
+            <span class="author-block">Afshin Bozorgpour<sup>*</sup>,</span>
+            <span class="author-block">AmirHossein Zarif-Fakharnia,</span>
+            <span class="author-block">Wenjin Chen,</span>
+            <span class="author-block">Dorit Merhof,</span>
+            <span class="author-block">David J. Foran,</span>
+            <span class="author-block">Jasmine Grewal,</span>
+            <span class="author-block">Ilker Hacihaliloglu</span>
+          </div>
+          <p class="equal-note"><sup>*</sup>Equal contribution</p>
+          <div class="publication-links">
+            <a class="button" href="https://arxiv.org/abs/2503.17543" target="_blank" rel="noopener noreferrer">
+              <i class="ai ai-arxiv" aria-hidden="true"></i><span>arXiv</span>
+            </a>
+            <a class="button" href="https://github.com/moeinheidari7829/Echo-E3Net" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github" aria-hidden="true"></i><span>Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="../assets/echo-e3net.png" alt="Echo-E³Net overview figure" class="teaser-img">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Left ventricular ejection fraction (LVEF) is a primary marker of cardiac function. However, routine estimation from endocardial measurements requires manual delineation at end-diastole (ED) and end-systole (ES), a process that is time-consuming and subject to inter-observer variability. Reliable automation is especially valuable for point-of-care ultrasound (POCUS), where computational resources are limited and acquisition quality varies. We propose Echo-E³Net, an anatomy-guided spatio-temporal network that explicitly embeds cardiac anatomy into LVEF prediction. A dual-phase Endocardial Border Detector (E²CBD) uses phase-specific cross-attention to localize ED/ES endocardial landmarks and produce phase-aware landmark embeddings, while an Endocardial Feature Aggregator (E²FA) fuses these embeddings with global statistical descriptors of deep feature maps to refine EF regression. Training is guided by a lightweight geometric loss that uses ED and ES endocardial landmarks to regularize EF prediction. On EchoNet-Dynamic and a PSAX subset of EchoNet-Pediatric, Echo-E³Net attains competitive performance using only 1.55M parameters and 8.05 GFLOPs, an order-of-magnitude compute reduction versus recent baselines, supporting real-time deployment. Our code is publicly available at https://github.com/moeinheidari7829/Echo-E3Net.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-head">
+      <h2 class="title">BibTeX</h2>
+      <button type="button" class="copy-bibtex" aria-label="Copy BibTeX"><i class="far fa-copy" aria-hidden="true"></i> <span>Copy</span></button>
+    </div>
+    <pre><code>@article{heidari2025echoenet,
+  title   = {Echo-E$^3$Net: Efficient Endocardial Spatio-Temporal Network for Ejection Fraction Estimation},
+  author  = {Heidari, Moein and Bozorgpour, Afshin and Zarif-Fakharnia, AmirHossein and Chen, Wenjin and Merhof, Dorit and Foran, David J. and Grewal, Jasmine and Hacihaliloglu, Ilker},
+  journal = {arXiv preprint arXiv:2503.17543},
+  year    = {2025}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <a href="../">Moein Heidari</a> · This website is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+      <p>Page template adapted from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.copy-bibtex').addEventListener('click', function () {
+    var btn = this, label = btn.querySelector('span');
+    navigator.clipboard.writeText(document.querySelector('#BibTeX code').textContent).then(function () {
+      label.textContent = 'Copied';
+      setTimeout(function () { label.textContent = 'Copy'; }, 1500);
+    });
+  });
+</script>
+</body>
+</html>

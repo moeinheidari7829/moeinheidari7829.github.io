@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>U-Net modifications for retroperitoneal tumor segmentation</title>
+  <meta name="description" content="A Study on the Performance of U-Net Modifications in Retroperitoneal Tumor Segmentation">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css">
+  <link rel="stylesheet" href="../assets/project.css">
+</head>
+<body>
+
+<nav class="project-nav">
+  <a href="../#publications"><i class="fas fa-arrow-left" aria-hidden="true"></i> Moein Heidari</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">A Study on the Performance of U-Net Modifications in Retroperitoneal Tumor Segmentation</h1>
+          <p class="is-size-4 has-text-weight-semibold mt-2 mb-4 publication-venue-line">✨ SPIE Medical Imaging 2025 ✨</p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="../">Moein Heidari</a>,</span>
+            <span class="author-block">Ehsan Khodapanah Aghdam,</span>
+            <span class="author-block">Alexander Manzella,</span>
+            <span class="author-block">Daniel Hsu,</span>
+            <span class="author-block">Rebecca Scalabrino,</span>
+            <span class="author-block">Wenjin Chen,</span>
+            <span class="author-block">David J. Foran,</span>
+            <span class="author-block">Ilker Hacihaliloglu</span>
+          </div>
+          <div class="publication-links">
+            <a class="button" href="https://arxiv.org/abs/2502.00314" target="_blank" rel="noopener noreferrer">
+              <i class="ai ai-arxiv" aria-hidden="true"></i><span>arXiv</span>
+            </a>
+            <a class="button" href="https://github.com/moeinheidari7829/Retroperitoneal_Tumour_Segmentation_SPIE2025" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github" aria-hidden="true"></i><span>Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="../assets/SPIE.png" alt="U-Net modifications for retroperitoneal tumor segmentation overview figure" class="teaser-img">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>The retroperitoneum hosts a variety of tumors, including rare benign and malignant types, which pose diagnostic and treatment challenges due to their infrequency and proximity to vital structures. Estimating tumor volume is difficult due to their irregular shapes, and manual segmentation is time-consuming. Automatic segmentation using U-Net and its variants, incorporating Vision Transformer (ViT) elements, has shown promising results but struggles with high computational demands. To address this, architectures like the Mamba State Space Model (SSM) and Extended Long-Short Term Memory (xLSTM) offer efficient solutions by handling long-range dependencies with lower resource consumption. This study evaluates U-Net enhancements, including CNN, ViT, Mamba, and xLSTM, on a new in-house CT dataset and a public organ segmentation dataset. The proposed ViLU-Net model integrates Vi-blocks for improved segmentation. Results highlight xLSTM's efficiency in the U-Net framework. The code is publicly accessible on GitHub.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-head">
+      <h2 class="title">BibTeX</h2>
+      <button type="button" class="copy-bibtex" aria-label="Copy BibTeX"><i class="far fa-copy" aria-hidden="true"></i> <span>Copy</span></button>
+    </div>
+    <pre><code>@inproceedings{heidari2025study,
+  title     = {A study on the performance of U-Net modifications in retroperitoneal tumor segmentation},
+  author    = {Heidari, Moein and Khodapanah Aghdam, Ehsan and Manzella, Alexander and Hsu, Daniel and Scalabrino, Rebecca and Chen, Wenjin and Foran, David J. and Hacihaliloglu, Ilker},
+  booktitle = {Medical Imaging 2025: Computer-Aided Diagnosis},
+  publisher = {SPIE},
+  year      = {2025},
+  doi       = {10.1117/12.3046948}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <a href="../">Moein Heidari</a> · This website is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+      <p>Page template adapted from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.copy-bibtex').addEventListener('click', function () {
+    var btn = this, label = btn.querySelector('span');
+    navigator.clipboard.writeText(document.querySelector('#BibTeX code').textContent).then(function () {
+      label.textContent = 'Copied';
+      setTimeout(function () { label.textContent = 'Copy'; }, 1500);
+    });
+  });
+</script>
+</body>
+</html>
