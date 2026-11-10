@@ -5,7 +5,7 @@
 # Moein Heidari
 
 **Ph.D. Candidate · Biomedical Engineering · University of British Columbia**<br>
-<sub>UltrAi Lab · Pushing the boundaries of AI in healthcare.</sub>
+<sub>Pushing the boundaries of AI in healthcare.</sub>
 
 <br>
 
