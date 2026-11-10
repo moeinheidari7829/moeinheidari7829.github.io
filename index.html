@@ -160,6 +160,7 @@
           <h2>News</h2>
         </div>
         <ul class="news-list">
+          <li><article class="news-card"><p class="news-date">Nov. 2026</p><p class="news-copy">📄 New preprint: <a href="p2echo/" class="link-accent">Prompt2Echo (P2Echo): Text-Prompted Multi-View Echocardiography Segmentation with One Model</a> is now on <a href="https://arxiv.org/abs/ARXIV_ID_PLACEHOLDER" target="_blank" rel="noopener noreferrer">arXiv</a>, with <a href="https://github.com/moeinheidari7829/P2Echo" target="_blank" rel="noopener noreferrer">code and checkpoint</a> released.</p></article></li>
           <li><article class="news-card"><p class="news-date">Nov. 2026</p><p class="news-copy">📄 New preprint: <a href="every-pixel/" class="link-accent">Every Pixel Is an Option: A System One Model for Medical Ultrasound Biometry</a> is now on <a href="https://arxiv.org/abs/2611.03360" target="_blank" rel="noopener noreferrer">arXiv</a>.</p></article></li>
           <li><article class="news-card"><p class="news-date">Nov. 2026</p><p class="news-copy">🎉 Paper <strong>Which Pretext Task Transfers? Self-Supervised Pretraining Objectives for Lung Ultrasound</strong> accepted for an <strong>oral presentation</strong> at <strong>SPIE Medical Imaging 2027</strong>.</p></article></li>
           <li><article class="news-card"><p class="news-date">Oct. 2026</p><p class="news-copy">🏆 Our paper <a href="wara/" class="link-accent">WaRA</a> won the <strong>Impact Award</strong> at the <strong>MIRASOL workshop</strong> at MICCAI 2026.</p></article></li>
@@ -204,7 +205,7 @@
           <button type="button" class="pub-filter" data-filter="2023" aria-pressed="false">2023</button>
           <button type="button" class="pub-filter" data-filter="2022" aria-pressed="false">2022</button>
         </div>
-        <p class="publication-status" aria-live="polite">Showing all 27 publications.</p>
+        <p class="publication-status" aria-live="polite">Showing all 28 publications.</p>
 
         <article class="post oral-paper" data-year="2027">
           <div class="pub-media">
@@ -223,6 +224,31 @@
                 <summary class="pub-abstract-toggle"></summary>
                 <div class="pub-abstract-body">
                   <p>Self-supervised learning (SSL) can reduce the need for labelled medical images, but the choice of pretext objective remains unclear for lung ultrasound (LUS). Contrastive learning, masked reconstruction, and joint-embedding predictive architectures (JEPA) differ in the space in which their targets are defined, yet existing ultrasound studies compare them under different corpora, backbones, and evaluation protocols. We compare these three objective families using the same encoder backbone, pretraining corpus, optimisation schedule, and frozen-evaluation protocol. Encoders are pretrained on COVID-BLUeS LUS videos and evaluated with linear, kNN, and attentive probes at 5%, 10%, 50%, and 100% label budgets. Evaluation is performed on POCUS using patient-level five-fold cross-validation and on the independently acquired Mendeley-Uganda dataset, which is excluded from both pretraining and probe fitting. At the full label budget under linear probing, VideoMAE and V-JEPA achieve 66.5 ± 13.1 and 65.4 ± 11.7 balanced accuracy on POCUS, while MoCo achieves 42.1 ± 1.2. On Mendeley-Uganda, the ranking reverses: MoCo performs best at 62.7 ± 1.0, followed by VideoMAE at 53.8 ± 2.8, while V-JEPA falls near chance at 35.1 ± 4.9. These results show that POCUS probe accuracy alone does not identify the objective that transfers best across datasets. We also outline planned representation-level analyses to examine this reversal. Code is publicly available at https://github.com/moeinheidari7829/LUSVideoSSL.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </article>
+
+        <article class="post" data-year="2026">
+          <div class="pub-media">
+            <img src="assets/p2echo.png" alt="P2Echo teaser" loading="lazy">
+          </div>
+          <div class="pub-content">
+            <h3 class="pub-title"><a href="p2echo/">Prompt2Echo (P2Echo): Text-Prompted Multi-View Echocardiography Segmentation with One Model</a></h3>
+            <p class="pub-authors">
+              <strong>Moein Heidari*</strong>, Alvin Kimbowa*, Mahdi Tabatabaei, Afshin Bozorgpour, Sina Ghorbani Kolahi, River Jiang, Wenjin Chen, David J. Foran, Jasmine Grewal, Dorit Merhof, Ilker Hacihaliloglu
+              <br><span class="pub-author-note">* Equal contribution</span>
+            </p>
+            <p class="pub-venue">arXiv preprint, 2026</p>
+            <div class="pub-actions">
+              <a class="pub-action-link" href="p2echo/">project</a>
+              <a class="pub-action-link" href="https://arxiv.org/abs/ARXIV_ID_PLACEHOLDER" target="_blank" rel="noopener noreferrer">paper</a>
+              <a class="pub-action-link" href="https://github.com/moeinheidari7829/P2Echo" target="_blank" rel="noopener noreferrer">code</a>
+              <details class="pub-abstract">
+                <summary class="pub-abstract-toggle"></summary>
+                <div class="pub-abstract-body">
+                  <p>Automated segmentation in multi-view echocardiography is essential for comprehensive cardiac assessment, yet remains challenging due to substantial anatomical and appearance variability across standard acoustic windows. In this paper, we present P2Echo, a unified framework capable of segmenting diverse cardiac structures across multiple standard echocardiographic views using a single model controlled by structured view-aware text prompts. Unlike recent foundation model adaptations that rely on implicit latent priors, P2Echo explicitly conditions the segmentation process via a novel Dynamic Image-Text Alignment (DyITA) module. DyITA integrates a differentiable routing mechanism and token differential operators to dynamically modulate decoder features according to the requested view and target structure. This allows the network to adaptively switch its processing pathways for different views without architectural changes. Extensive experiments on a large-scale internal dataset (seen during training) and held-out evaluation on three external datasets demonstrate that P2Echo matches or exceeds both view-specific specialists and state-of-the-art universal models at a fraction of their computational cost, offering an efficient, controllable solution for multi-plane cardiac analysis. Code is available at https://github.com/moeinheidari7829/P2Echo.</p>
                 </div>
               </details>
             </div>

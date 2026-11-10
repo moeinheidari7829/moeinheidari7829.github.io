@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>P2Echo: Text-Prompted Multi-View Echocardiography Segmentation</title>
+  <meta name="description" content="Prompt2Echo (P2Echo): Text-Prompted Multi-View Echocardiography Segmentation with One Model">
+  <meta property="og:title" content="Prompt2Echo (P2Echo)">
+  <meta property="og:description" content="One text-prompted network that segments cardiac structures across echocardiographic views.">
+  <meta property="og:image" content="static/teaser-poster.jpg">
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css">
+  <link rel="stylesheet" href="../assets/project.css">
+  <style>
+    .pp-video video { display: block; width: 100%; border-radius: 8px; box-shadow: 0 8px 28px rgba(10, 20, 40, 0.18); }
+    .highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.9rem; margin-top: 1.5rem; }
+    .highlight { padding: 1rem 1.1rem; border: 1px solid #ececec; border-radius: 8px; background: #fafbfc; text-align: left; }
+    .highlight .num { font-family: 'Google Sans', sans-serif; font-size: 1.7rem; font-weight: 600; color: #e08a00; line-height: 1.1; }
+    .highlight .lbl { font-size: 0.86rem; color: #4a4a4a; margin-top: 0.3rem; }
+  </style>
+</head>
+<body>
+
+<nav class="project-nav">
+  <a href="../#publications"><i class="fas fa-arrow-left" aria-hidden="true"></i> Moein Heidari</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Prompt2Echo (P2Echo): Text-Prompted Multi-View Echocardiography Segmentation with One Model</h1>
+          <p class="is-size-4 has-text-weight-semibold mt-2 mb-4 publication-venue-line">✨ arXiv preprint, 2026 ✨</p>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="../">Moein Heidari</a><sup>*</sup>,</span>
+            <span class="author-block">Alvin Kimbowa<sup>*</sup>,</span>
+            <span class="author-block">Mahdi Tabatabaei,</span>
+            <span class="author-block">Afshin Bozorgpour,</span>
+            <span class="author-block">Sina Ghorbani Kolahi,</span>
+            <span class="author-block">River Jiang,</span>
+            <span class="author-block">Wenjin Chen,</span>
+            <span class="author-block">David J. Foran,</span>
+            <span class="author-block">Jasmine Grewal,</span>
+            <span class="author-block">Dorit Merhof,</span>
+            <span class="author-block">Ilker Hacihaliloglu</span>
+          </div>
+          <p class="equal-note"><sup>*</sup>Equal contribution</p>
+          <div class="publication-links">
+            <a class="button" href="https://arxiv.org/abs/ARXIV_ID_PLACEHOLDER" target="_blank" rel="noopener noreferrer">
+              <i class="ai ai-arxiv" aria-hidden="true"></i><span>arXiv</span>
+            </a>
+            <a class="button" href="https://github.com/moeinheidari7829/P2Echo" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github" aria-hidden="true"></i><span>Code</span>
+            </a>
+            <a class="button" href="https://drive.google.com/file/d/1wKF_MnWlMcpfYZTurb2wHOobENmhHQuj/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <i class="fas fa-database" aria-hidden="true"></i><span>Checkpoint</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <figure class="pp-figure pp-video">
+        <video autoplay muted loop playsinline controls preload="metadata" poster="static/teaser-poster.jpg">
+          <source src="static/teaser.mp4" type="video/mp4">
+        </video>
+        <figcaption class="has-text-centered"><b>P2Echo</b> segments LV, MYO, LA, RV and RA in 2CH, 3CH, 4CH and PSAX
+          echocardiography with a single network, controlled by view-aware text prompts.</figcaption>
+      </figure>
+      <div class="highlights">
+        <div class="highlight"><div class="num">1 model</div><div class="lbl">for four views and five structures, steered by text</div></div>
+        <div class="highlight"><div class="num">96.94%</div><div class="lbl">mDice on 2CH, internal test set</div></div>
+        <div class="highlight"><div class="num">82.22%</div><div class="lbl">mDice on held-out HMC-QU</div></div>
+        <div class="highlight"><div class="num">64.68 FPS</div><div class="lbl">on one H100 at 6.90 GFLOPs</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Automated segmentation in multi-view echocardiography is essential for comprehensive cardiac assessment, yet remains challenging due to substantial anatomical and appearance variability across standard acoustic windows. In this paper, we present P2Echo, a unified framework capable of segmenting diverse cardiac structures across multiple standard echocardiographic views using a single model controlled by structured view-aware text prompts. Unlike recent foundation model adaptations that rely on implicit latent priors, P2Echo explicitly conditions the segmentation process via a novel Dynamic Image-Text Alignment (DyITA) module. DyITA integrates a differentiable routing mechanism and token differential operators to dynamically modulate decoder features according to the requested view and target structure. This allows the network to adaptively switch its processing pathways for different views without architectural changes. Extensive experiments on a large-scale internal dataset (seen during training) and held-out evaluation on three external datasets demonstrate that P2Echo matches or exceeds both view-specific specialists and state-of-the-art universal models at a fraction of their computational cost, offering an efficient, controllable solution for multi-plane cardiac analysis. Code is available at <a href="https://github.com/moeinheidari7829/P2Echo">github.com/moeinheidari7829/P2Echo</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section pp-section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Why one model is hard</h2>
+    <figure class="pp-figure" style="max-width:620px">
+      <img src="static/challenges.png" alt="Challenges of multi-view echocardiography segmentation" loading="lazy">
+      <figcaption><b>Figure 1.</b> Key challenges in multi-view echocardiography image segmentation: (a) cross-view appearance
+        disparity, (b) acquisition-domain shift, (c) inter-subject anatomical variability, (d) view-specific anatomical
+        visibility, and (e) boundary degradation from speckle, shadowing, and signal dropout. Colored contours denote the
+        annotated cardiac structures.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section pp-section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Method</h2>
+    <figure class="pp-figure">
+      <img src="static/architecture.png" alt="P2Echo architecture" loading="lazy">
+      <figcaption><b>Figure 2.</b> <b>The P2Echo framework.</b> A dual-encoder extracts hierarchical visual and textual
+        features, aligned by a prompt decoder into stage-specific mask embeddings, which are natively fused via ITA blocks.
+        Each ITA block is built around <b>Dynamic Image-Text Alignment (DyITA)</b>: dynamic projection with routed redundancy
+        projectors, a dynamic measure kernel, and a cross-modal differential operator before softmax cross-attention.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section pp-section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Results</h2>
+    <figure class="pp-table">
+      <figcaption><b>Table 1.</b> Comparison on the internal test set across echocardiographic views (mean ± s.d.).
+        <span style="background:#F4B6B6">Best</span> and <span style="background:#FBDDB8">second best</span> per column.
+        <sup>**</sup> p &lt; 0.01, Wilcoxon signed-rank test against the second-best method.</figcaption>
+      <div class="pp-table-scroll"><table>
+<tr><td rowspan="2" class="bt">Method</td><td colspan="3" class="bt">2CH</td><td colspan="3" class="bt">3CH</td><td colspan="3" class="bt">4CH</td><td colspan="3" class="bt">PSAX</td></tr>
+<tr><td class="bt">mDice ↑</td><td class="bt">mIoU ↑</td><td class="bt">HD95 ↓</td><td class="bt">mDice ↑</td><td class="bt">mIoU ↑</td><td class="bt">HD95 ↓</td><td class="bt">mDice ↑</td><td class="bt">mIoU ↑</td><td class="bt">HD95 ↓</td><td class="bt">mDice ↑</td><td class="bt">mIoU ↑</td><td class="bt">HD95 ↓</td></tr>
+<tr><td class="bt">nnUNet</td><td class="bt">92.82 ± 3.75</td><td class="bt">86.82 ± 6.14</td><td class="bt">4.90 ± 2.20</td><td class="bt">93.07 ± 2.97</td><td class="bt">87.17 ± 5.03</td><td class="bt">5.98 ± 3.02</td><td class="bt" style="background:#FBDDB8">91.39 ± 5.68</td><td class="bt">84.64 ± 8.17</td><td class="bt">6.35 ± 4.02</td><td class="bt">91.50 ± 5.69</td><td class="bt">84.78 ± 8.54</td><td class="bt">7.72 ± 4.86</td></tr>
+<tr><td>SwinUNet</td><td>86.58 ± 6.08</td><td>77.15 ± 7.93</td><td>7.75 ± 3.76</td><td>87.27 ± 6.03</td><td>77.88 ± 8.89</td><td>8.86 ± 4.97</td><td>85.43 ± 8.16</td><td>75.62 ± 10.04</td><td>9.04 ± 6.51</td><td>85.29 ± 8.96</td><td>75.29 ± 12.06</td><td>11.11 ± 7.10</td></tr>
+<tr><td>ResUNet</td><td>91.80 ± 2.89</td><td>85.21 ± 4.53</td><td>5.46 ± 3.30</td><td>91.78 ± 3.60</td><td>85.26 ± 5.81</td><td>5.69 ± 4.01</td><td>88.09 ± 6.52</td><td>80.01 ± 8.57</td><td>7.83 ± 10.28</td><td>88.99 ± 7.45</td><td>80.86 ± 10.67</td><td>14.88 ± 15.12</td></tr>
+<tr><td>MissFormer</td><td>90.88 ± 3.04</td><td>83.70 ± 4.73</td><td>5.48 ± 1.62</td><td>91.09 ± 5.65</td><td>84.12 ± 8.43</td><td>5.95 ± 4.07</td><td>88.34 ± 5.67</td><td>79.92 ± 7.72</td><td>6.24 ± 4.16</td><td>88.50 ± 7.24</td><td>80.00 ± 10.26</td><td>9.20 ± 5.19</td></tr>
+<tr><td>CENet</td><td>93.11 ± 2.14</td><td>87.38 ± 3.60</td><td>4.07 ± 1.25</td><td>93.09 ± 2.99</td><td>87.42 ± 5.03</td><td>4.42 ± 2.10</td><td>90.88 ± 4.80</td><td>83.89 ± 6.56</td><td>4.71 ± 3.02</td><td>91.08 ± 5.10</td><td>83.99 ± 8.02</td><td style="background:#FBDDB8">7.29 ± 3.46</td></tr>
+<tr><td class="bt">SAMUS</td><td class="bt">89.04 ± 10.39</td><td class="bt">81.85 ± 12.13</td><td class="bt">13.67 ± 3.38</td><td class="bt" style="background:#FBDDB8">93.61 ± 2.91</td><td class="bt">88.13 ± 4.97</td><td class="bt">8.42 ± 1.18</td><td class="bt">89.36 ± 9.15</td><td class="bt">82.00 ± 11.44</td><td class="bt">13.72 ± 3.47</td><td class="bt">91.46 ± 4.23</td><td class="bt">84.55 ± 6.86</td><td class="bt">12.28 ± 2.17</td></tr>
+<tr><td>SAM3 (Zero-shot)</td><td>8.75 ± 6.41</td><td>4.84 ± 4.23</td><td>220.04 ± 7.70</td><td>2.37 ± 1.34</td><td>1.29 ± 0.26</td><td>310.12 ± 20.45</td><td>6.32 ± 4.22</td><td>3.53 ± 2.01</td><td>241.67 ± 30.12</td><td>5.06 ± 2.66</td><td>2.99 ± 2.20</td><td>306.86 ± 11.85</td></tr>
+<tr><td>SAM3 (Fine-tuned)</td><td style="background:#FBDDB8">93.39 ± 1.75</td><td style="background:#FBDDB8">87.60 ± 3.11</td><td>3.18 ± 0.89</td><td>92.70 ± 2.48</td><td>87.04 ± 4.21</td><td>6.69 ± 1.70</td><td>90.85 ± 5.25</td><td>83.85 ± 7.59</td><td>4.19 ± 3.53</td><td>91.18 ± 4.66</td><td>84.13 ± 7.32</td><td>7.90 ± 3.85</td></tr>
+<tr><td>MedCLIP-SAMv2</td><td>28.98 ± 16.00</td><td>17.98 ± 11.14</td><td>170.40 ± 79.67</td><td>31.70 ± 12.76</td><td>19.48 ± 8.57</td><td>170.09 ± 60.78</td><td>24.61 ± 14.78</td><td>14.87 ± 10.07</td><td>170.90 ± 86.40</td><td>27.72 ± 15.34</td><td>17.04 ± 10.72</td><td>36.48 ± 10.60</td></tr>
+<tr><td>Grounding DINO-US-SAM</td><td>73.97 ± 21.04</td><td>62.20 ± 21.16</td><td>15.47 ± 19.39</td><td>83.29 ± 7.09</td><td>71.92 ± 9.60</td><td>10.59 ± 5.61</td><td>76.43 ± 13.88</td><td>64.30 ± 16.02</td><td>12.31 ± 7.41</td><td>84.42 ± 9.54</td><td>74.06 ± 12.55</td><td>13.50 ± 8.19</td></tr>
+<tr><td>EchoONE</td><td>91.69 ± 11.67</td><td>85.83 ± 12.64</td><td style="background:#FBDDB8">2.51 ± 3.38</td><td>93.60 ± 3.35</td><td style="background:#FBDDB8">88.15 ± 5.48</td><td style="background:#FBDDB8">4.24 ± 2.19</td><td>91.11 ± 10.10</td><td style="background:#FBDDB8">84.69 ± 11.62</td><td style="background:#FBDDB8">3.88 ± 3.50</td><td style="background:#FBDDB8">91.71 ± 8.82</td><td style="background:#F4B6B6"><b>85.56 ± 10.70</b></td><td>7.97 ± 3.06</td></tr>
+<tr><td class="bt bb"><b>P2Echo (ours)</b></td><td class="bt bb" style="background:#F4B6B6"><b>96.94<sup>**</sup> ± 1.72</b></td><td class="bt bb" style="background:#F4B6B6"><b>94.11<sup>**</sup> ± 3.08</b></td><td class="bt bb" style="background:#F4B6B6"><b>2.03<sup>**</sup> ± 0.92</b></td><td class="bt bb" style="background:#F4B6B6"><b>94.71<sup>**</sup> ± 2.16</b></td><td class="bt bb" style="background:#F4B6B6"><b>90.03<sup>**</sup> ± 3.79</b></td><td class="bt bb" style="background:#F4B6B6"><b>3.96<sup>**</sup> ± 1.60</b></td><td class="bt bb" style="background:#F4B6B6"><b>93.87<sup>**</sup> ± 5.07</b></td><td class="bt bb" style="background:#F4B6B6"><b>88.81<sup>**</sup> ± 7.48</b></td><td class="bt bb" style="background:#F4B6B6"><b>3.33<sup>**</sup> ± 3.77</b></td><td class="bt bb" style="background:#F4B6B6"><b>92.00 ± 4.97</b></td><td class="bt bb" style="background:#FBDDB8">85.52 ± 7.76</td><td class="bt bb" style="background:#F4B6B6"><b>6.99 ± 3.74</b></td></tr>
+      </table></div>
+    </figure>
+    <figure class="pp-table">
+      <figcaption><b>Table 2.</b> Held-out external datasets, excluded from training (mean ± s.d.). Params in millions,
+        FLOPs in G. <span style="background:#F4B6B6">Best</span> and <span style="background:#FBDDB8">second best</span> per
+        column; <sup>**</sup> p &lt; 0.01.</figcaption>
+      <div class="pp-table-scroll"><table>
+<tr><td rowspan="2" class="bt">Method</td><td rowspan="2" class="bt">Params (M)</td><td rowspan="2" class="bt">FLOPs (G)</td><td colspan="2" class="bt">HMC-QU</td><td colspan="2" class="bt">CardiacNet</td></tr>
+<tr><td class="bt">mDice ↑</td><td class="bt">HD95 ↓</td><td class="bt">mDice ↑</td><td class="bt">HD95 ↓</td></tr>
+<tr><td class="bt">nnUNet</td><td class="bt">33.48</td><td class="bt">28.30</td><td class="bt">45.30 ± 45.41</td><td class="bt" style="background:#FBDDB8">7.64 ± 3.78</td><td class="bt">88.13 ± 10.98</td><td class="bt">6.32 ± 6.27</td></tr>
+<tr><td>SwinUNet</td><td>27.17</td><td>6.16</td><td>52.24 ± 11.51</td><td>19.28 ± 15.53</td><td>75.42 ± 14.52</td><td>11.40 ± 7.45</td></tr>
+<tr><td>ResUNet</td><td>13.05</td><td>54.54</td><td>58.02 ± 12.26</td><td>23.04 ± 14.05</td><td>86.82 ± 14.30</td><td>6.22 ± 7.38</td></tr>
+<tr><td>MissFormer</td><td>42.46</td><td>9.89</td><td>48.31 ± 11.80</td><td>23.24 ± 12.21</td><td>86.07 ± 13.70</td><td>5.98 ± 6.75</td></tr>
+<tr><td>CENet</td><td>33.39</td><td>12.76</td><td>54.41 ± 13.25</td><td>19.89 ± 12.65</td><td>89.56 ± 13.48</td><td>4.33 ± 6.68</td></tr>
+<tr><td class="bt">SAMUS</td><td class="bt">39.65</td><td class="bt">145.88</td><td class="bt" style="background:#FBDDB8">61.93 ± 27.99</td><td class="bt">19.19 ± 14.77</td><td class="bt">86.64 ± 10.92</td><td class="bt">8.94 ± 5.48</td></tr>
+<tr><td>SAM3 (Zero-shot)</td><td>-</td><td>2417.08</td><td>1.91 ± 1.00</td><td>261.99 ± 3.54</td><td>2.14 ± 2.00</td><td>173.12 ± 7.95</td></tr>
+<tr><td>SAM3 (Fine-tuned)</td><td>14.40</td><td>2417.08</td><td>43.46 ± 43.43</td><td>179.59 ± 32.25</td><td style="background:#FBDDB8">90.62 ± 9.84</td><td style="background:#FBDDB8">3.70 ± 5.38</td></tr>
+<tr><td>MedCLIP-SAMv2</td><td>836.99</td><td>2458.17</td><td>24.25 ± 14.73</td><td>78.30 ± 27.05</td><td>16.20 ± 8.24</td><td>232.61 ± 57.47</td></tr>
+<tr><td>Grounding DINO-US-SAM</td><td>397.29</td><td>1171.38</td><td>60.99 ± 28.08</td><td>13.13 ± 6.31</td><td>78.05 ± 21.81</td><td>9.92 ± 9.67</td></tr>
+<tr><td>EchoONE</td><td>45.62</td><td>174.34</td><td>53.96 ± 31.43</td><td>13.10 ± 16.69</td><td>88.10 ± 10.43</td><td>3.84 ± 5.24</td></tr>
+<tr><td class="bt bb"><b>P2Echo (ours)</b></td><td class="bt bb">37.47</td><td class="bt bb">6.90</td><td class="bt bb" style="background:#F4B6B6"><b>82.22<sup>**</sup> ± 9.53</b></td><td class="bt bb" style="background:#F4B6B6"><b>6.92<sup>**</sup> ± 2.58</b></td><td class="bt bb" style="background:#F4B6B6"><b>92.95<sup>**</sup> ± 10.02</b></td><td class="bt bb" style="background:#F4B6B6"><b>3.37<sup>**</sup> ± 5.63</b></td></tr>
+      </table></div>
+    </figure>
+    <figure class="pp-figure">
+      <img src="static/qualitative.png" alt="Qualitative comparison" loading="lazy">
+      <figcaption><b>Figure 3.</b> <b>Qualitative comparison across four echocardiographic views (rows).</b> Columns show the
+        input image, baseline predictions, and P2Echo. Colored regions denote predictions, while class-colored contours
+        indicate ground-truth boundaries. Red arrows highlight representative segmentation errors.</figcaption>
+    </figure>
+    <figure class="pp-figure">
+      <img src="static/analysis.png" alt="Qualitative analysis of P2Echo" loading="lazy">
+      <figcaption><b>Figure 4.</b> <b>Qualitative analysis of P2Echo.</b> (a) Prompt-driven segmentation of structures beyond
+        available annotations. (b) Feature activation maps before and after DyITA for different target structures.
+        (c) Visualization of DyITA component ablations.</figcaption>
+    </figure>
+    <figure class="pp-table">
+      <figcaption><b>Table 3.</b> Prompt intervention on 450 images (950 structure instances). Only the prompt text is varied.
+        Gray rows probe unsupported requests, where near-zero overlap is the intended behavior.</figcaption>
+      <div class="pp-table-scroll"><table>
+<tr><td class="bt">Condition</td><td class="bt">Example prompt</td><td class="bt">Dice (%) ↑</td><td class="bt">IoU (%) ↑</td></tr>
+<tr><td class="bt">Canonical</td><td class="bt" style="text-align:left"><i>“Segment the LV: The LV is fully visualized from base to apex.”</i></td><td class="bt"><b>93.53 ± 6.83</b></td><td class="bt"><b>88.39 ± 8.84</b></td></tr>
+<tr><td>Clinical paraphrase</td><td style="text-align:left"><i>“Delineate the left ventricular blood pool.”</i></td><td>80.48 ± 23.88</td><td>72.62 ± 26.76</td></tr>
+<tr><td>Concise</td><td style="text-align:left"><i>“Segment the left ventricle cavity.”</i></td><td>35.83 ± 36.23</td><td>28.58 ± 30.95</td></tr>
+<tr><td class="bt" style="background:#f5f5f5">Ambiguous</td><td class="bt" style="background:#f5f5f5" style="text-align:left"><i>“Segment the cardiac chamber.”</i></td><td class="bt" style="background:#f5f5f5">0.01 ± 0.23</td><td class="bt" style="background:#f5f5f5">0.01 ± 0.12</td></tr>
+<tr><td style="background:#f5f5f5">Irrelevant</td><td style="background:#f5f5f5" style="text-align:left"><i>“Segment the liver.”</i></td><td style="background:#f5f5f5">6.35 ± 19.70</td><td style="background:#f5f5f5">4.95 ± 16.54</td></tr>
+<tr><td class="bb" style="background:#f5f5f5">Null</td><td class="bb" style="background:#f5f5f5" style="text-align:left"><i>“No anatomical structure is requested.”</i></td><td class="bb" style="background:#f5f5f5">0.00 ± 0.00</td><td class="bb" style="background:#f5f5f5">0.00 ± 0.00</td></tr>
+      </table></div>
+    </figure>
+    <figure class="pp-table">
+      <figcaption><b>Table 4.</b> Inference time per image on an NVIDIA H100 (FP32, batch size 1; mean ± s.d. over 10 runs).</figcaption>
+      <div class="pp-table-scroll"><table>
+<tr><td class="bt">Method</td><td class="bt">Time (s/image) ↓</td></tr>
+<tr><td class="bt">nnUNet</td><td class="bt">0.04057 ± 0.00002</td></tr>
+<tr><td>SwinUNet</td><td>0.00577 ± 0.00002</td></tr>
+<tr><td>MissFormer</td><td>0.01034 ± 0.00001</td></tr>
+<tr><td>CENet</td><td>0.02328 ± 0.00010</td></tr>
+<tr><td class="bt">SAMUS</td><td class="bt">0.06620 ± 0.00024</td></tr>
+<tr><td>SAM3 (Zero-shot)</td><td>0.19694 ± 0.00004</td></tr>
+<tr><td>SAM3 (Fine-tuned)</td><td>0.08203 ± 0.00009</td></tr>
+<tr><td>MedCLIP-SAMv2</td><td>2.46376 ± 0.02072</td></tr>
+<tr><td>Grounding DINO-US-SAM</td><td>2.59870 ± 0.01970</td></tr>
+<tr><td>EchoONE</td><td>0.08649 ± 0.00004</td></tr>
+<tr><td class="bt bb"><b>P2Echo (ours)</b></td><td class="bt bb"><b>0.01546 ± 0.00002</b></td></tr>
+      </table></div>
+    </figure>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-head">
+      <h2 class="title">BibTeX</h2>
+      <button type="button" class="copy-bibtex" aria-label="Copy BibTeX"><i class="far fa-copy" aria-hidden="true"></i> <span>Copy</span></button>
+    </div>
+    <pre><code>@article{heidari2026p2echo,
+  title   = {Prompt2Echo (P2Echo): Text-Prompted Multi-View Echocardiography Segmentation with One Model},
+  author  = {Heidari, Moein and Kimbowa, Alvin and Tabatabaei, Mahdi and Bozorgpour, Afshin and Ghorbani Kolahi, Sina and Jiang, River and Chen, Wenjin and Foran, David J. and Grewal, Jasmine and Merhof, Dorit and Hacihaliloglu, Ilker},
+  journal = {arXiv preprint arXiv:ARXIV_ID_PLACEHOLDER},
+  year    = {2026}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <a href="../">Moein Heidari</a> · This website is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+      <p>Page template adapted from <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.copy-bibtex').addEventListener('click', function () {
+    var btn = this, label = btn.querySelector('span');
+    navigator.clipboard.writeText(document.querySelector('#BibTeX code').textContent).then(function () {
+      label.textContent = 'Copied';
+      setTimeout(function () { label.textContent = 'Copy'; }, 1500);
+    });
+  });
+</script>
+</body>
+</html>

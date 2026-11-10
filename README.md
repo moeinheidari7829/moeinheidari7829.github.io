@@ -88,7 +88,7 @@
 
 <div align="center">
 
-**[→ All 27 publications](https://moeinheidari7829.github.io/#publications)**
+**[→ All 28 publications](https://moeinheidari7829.github.io/#publications)**
 
 <br>
 
